@@ -1,0 +1,44 @@
+:root {
+    --text: #252422;
+    --bg: #CCC5B9;
+
+    --primary: #EB5E28;
+    --secondary: #232D55;
+
+    --color-muted: #403D39;
+
+    /* Fonts */
+
+    --font-title: 'Cabinet Grotesk', sans-serif;
+    --font-body: 'Skatta Sans', sans-serif;
+
+    --font-size-body: 0.875rem;
+    --font-size-title: 3rem;
+    --font-size-nav: 1rem;
+
+    --font-weight-body: 400;
+    --font-weight-title: 700;
+
+    /* Navbar */
+
+    --width-disabled: 0.5rem;
+    --width-enabled: 0.75rem;
+
+    --height-disabled: 0.5rem;
+    --height-enabled: 0.75rem;
+
+    /* Containers */
+
+    --gap-sm: 0.5rem;
+    --gap-md: 0.75rem;
+    --gap-lg: 1rem;
+
+    --padding-1: 1rem;
+    --padding-2: 1.5rem;
+
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+
+
+}

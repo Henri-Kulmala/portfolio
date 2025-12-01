@@ -1,0 +1,66 @@
+.navWrapper {
+    padding: 1rem;
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.navItem:hover .navDot {
+    background-color: var(--primary);
+    transform: scale(1.5);
+}
+
+.navItem:hover .navLabel {
+    opacity: 100%;
+    color: var(--primary);
+}
+
+.navItem:focus-within .navDot {
+    transform: none;
+    background-color: var(--primary);
+    width: var(--width-enabled);
+    height: var(--height-enabled);
+}
+
+
+
+.navItem:focus .navLabel {
+    opacity: 100%;
+    color: var(--primary);
+}
+
+.navDot {
+    width: var(--width-disabled);
+    height: var(--height-disabled);
+    background-color: var(--color-muted);
+    border-radius: 50%;
+    transition: all 250ms ease-in-out;
+    user-select: none;
+}
+
+.navDotActive {
+    width: var(--width-enabled);
+    height: var(--height-enabled);
+    background-color: var(--primary);
+}
+
+.navLabel {
+    opacity: 0% ;
+    font-family: var(--font-body);
+    font-size: var(--font-size-nav);
+    font-weight: var(--font-weight-body);
+    color: var(--primary);
+    user-select: none;
+    transition: all 250ms ease-in-out;
+}
