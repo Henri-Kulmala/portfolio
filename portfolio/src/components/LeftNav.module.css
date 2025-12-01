@@ -1,4 +1,11 @@
 .navWrapper {
+    position: fixed;
+    top: 50%;
+    left: 10rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
     padding: 1rem;
 }
 

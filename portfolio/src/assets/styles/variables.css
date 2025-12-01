@@ -1,11 +1,12 @@
 :root {
     --text: #252422;
-    --bg: #CCC5B9;
+    --bg: #FFFCF2 ;
 
     --primary: #EB5E28;
     --secondary: #232D55;
 
     --color-muted: #403D39;
+    --color-light: #CCC5B9;
 
     /* Fonts */
 
@@ -40,5 +41,5 @@
     --border-radius-md: 0.5rem;
     --border-radius-lg: 1rem;
 
-
+    --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px:
 }
