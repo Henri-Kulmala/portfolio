@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./HomeSection.module.css";
-import profileImg from "../assets/media/Omakuva.jpg";
-export default function HomeSection() {
+import { IoChevronDown } from "react-icons/io5";
+import {
+  profilePic,
+} from "../assets/media";
+import { IconCarousel } from "./IconCarousel";
+
+
+export default function HomeSection({ scrollTo }: { scrollTo: () => void }) {
   return (
     <div>
       <div className={styles.heroContainer}>
@@ -14,11 +20,15 @@ export default function HomeSection() {
           </p>
         </div>
         <div className={styles.content}>
-          <img
-            className={styles.image}
-            src={profileImg}
-            alt=""
-          />
+          <img className={styles.image} src={profilePic} alt="" />
+        </div>
+      </div>
+      <div className={styles.heroFooter}>
+        <div className={styles.iconContainer}>
+          <IconCarousel />
+        </div>
+        <div className={styles.scrollDown}>
+          <IoChevronDown className={styles.icon} onClick={scrollTo} />
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ export function useActiveSection(sectionIds: string[]) {
     const options: IntersectionObserverInit = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // 50% of section must be visible
+      threshold: 0.5, 
     };
 
     const observer = new IntersectionObserver((entries) => {

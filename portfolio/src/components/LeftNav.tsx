@@ -36,7 +36,7 @@ export default function LeftNav({
               <span
                 className={isActive ? styles.navDotActive : styles.navDot}
               />
-              <span className={styles.navLabel}>{section.label}</span>
+              <span className={isActive? styles.navLabelActive : styles.navLabel}>{section.label}</span>
             </button>
           );
         })}

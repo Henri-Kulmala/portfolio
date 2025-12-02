@@ -46,3 +46,35 @@
     user-select: none;
     box-shadow: var(--box-shadow);
 }
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: var(--margin-1);
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.scrollDown:hover .icon {
+    transform: translateY(-10px);
+    
+}
+
+.heroFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: var(--padding-2);
+    gap: 5rem;
+
+}
+
+.scrollDown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--margin-2);
+}

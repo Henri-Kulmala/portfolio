@@ -3,6 +3,7 @@ import LeftNav, { type Section } from "../components/LeftNav";
 import styles from "./LandingPage.module.css";
 import HomeSection from "../components/HomeSection";
 import { useActiveSection } from "../hooks/useActiveSection";
+import ProjectsSection from "../components/ProjectsSection";
 
 const SECTIONS: Section[] = [
   { id: "home", label: "Home" },
@@ -30,14 +31,12 @@ export default function LandingPage() {
       />
       <main className={styles.content}>
         <section id="home" className={styles.section}>
-          <HomeSection />
+          <HomeSection scrollTo={() => handleNavigate("projects")} />
         </section>
         <section id="projects" className={styles.section}>
-          <HomeSection />
+          <ProjectsSection />
         </section>
-        <section id="about" className={styles.section}>
-          {/* About content later */}
-        </section>
+        <section id="about" className={styles.section}></section>
       </main>
     </div>
   );
