@@ -1,0 +1,30 @@
+.embla__container {
+    display: flex;
+
+}
+
+.embla {
+    max-width: 50rem;
+    margin: auto;
+    overflow: hidden;
+    border-radius: var(--border-radius-sm);
+
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 25%,
+            black 75%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 25%,
+            black 75%,
+            transparent 100%);
+    user-select: none;
+}
+
+
+.embla__slide {
+    display: flex;
+    flex: 0 0 auto;
+    padding-left: var(--padding-1);
+}

@@ -1,0 +1,25 @@
+
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg);
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    display: flex;
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    align-items: center;
+    justify-content: center;
+}

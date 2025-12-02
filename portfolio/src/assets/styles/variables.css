@@ -1,11 +1,13 @@
 :root {
     --text: #252422;
-    --bg: #CCC5B9;
+    --bg: #FFFCF2;
 
     --primary: #EB5E28;
     --secondary: #232D55;
 
     --color-muted: #403D39;
+    --color-light: #CCC5B9;
+    --color-white: #FFFFFF;
 
     /* Fonts */
 
@@ -14,10 +16,12 @@
 
     --font-size-body: 0.875rem;
     --font-size-title: 3rem;
+    --font-size-header: 1.5rem;
     --font-size-nav: 1rem;
 
     --font-weight-body: 400;
-    --font-weight-title: 700;
+    --font-weight-text: 600;
+    --font-weight-title: 900;
 
     /* Navbar */
 
@@ -27,11 +31,16 @@
     --height-disabled: 0.5rem;
     --height-enabled: 0.75rem;
 
-    /* Containers */
+    /* Layout */
+
+    --margin-1: 1rem;
+    --margin-2: 2rem;
+    --margin-3: 3rem;
 
     --gap-sm: 0.5rem;
     --gap-md: 0.75rem;
     --gap-lg: 1rem;
+    --gap-xl: 3rem;
 
     --padding-1: 1rem;
     --padding-2: 1.5rem;
@@ -39,6 +48,18 @@
     --border-radius-sm: 0.25rem;
     --border-radius-md: 0.5rem;
     --border-radius-lg: 1rem;
+    --border-radius-xl: 2rem;
 
+    /* Containers */
 
+    --container-sm: 20rem;
+    --container-md: 27rem;
+    --container-height: 20rem;
+    --container-img-height: 12.5rem;
+
+    
+
+    --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --box-shadow-inset: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    --box-shadow-inset-hover: rgba(50, 50, 93, 0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0) 0px 18px 36px -18px inset;
 }

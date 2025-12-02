@@ -1,0 +1,14 @@
+export { default as profilePic } from './Omakuva.jpg';
+export { default as CSSIcon } from './icons/CSS.svg';
+export { default as HTMLIcon } from './icons/HTML.svg';
+export { default as ReactIcon } from './icons/React.svg';
+export { default as NodeIcon } from './icons/NodeJs.svg';
+export { default as GitIcon } from './icons/Git.svg';
+export { default as JavaIcon } from './icons/Java.svg';
+export { default as JSIcon } from './icons/JS.svg';
+export { default as PythonIcon } from './icons/Python.svg';
+export { default as SQLIcon } from './icons/SQL.svg';
+export { default as DockerIcon } from './icons/Docker.svg';
+export { default as WPIcon } from './icons/WP.svg';
+export { default as ProductManagerImg } from './Tuotehallinta.svg';
+export { default as EComImg } from './Bölen Hella.png';
