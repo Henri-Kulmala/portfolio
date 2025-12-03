@@ -4,6 +4,7 @@ import styles from "./LandingPage.module.css";
 import HomeSection from "../components/HomeSection";
 import { useActiveSection } from "../hooks/useActiveSection";
 import ProjectsSection from "../components/ProjectsSection";
+import AboutSection from "../components/AboutSection";
 
 const SECTIONS: Section[] = [
   { id: "home", label: "Home" },
@@ -36,7 +37,9 @@ export default function LandingPage() {
         <section id="projects" className={styles.section}>
           <ProjectsSection />
         </section>
-        <section id="about" className={styles.section}></section>
+        <section id="about" className={styles.section}>
+          <AboutSection />
+        </section>
       </main>
     </div>
   );

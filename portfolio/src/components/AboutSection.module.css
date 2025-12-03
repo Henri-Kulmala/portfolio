@@ -1,0 +1,71 @@
+.sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-2);
+    gap: var(--gap-xl);
+    cursor: pointer;
+}
+
+.infoCardWrapper {
+    position: relative;
+    transform-style: preserve-3d;
+
+}
+.containerRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionTitle {
+    font-family: var(--font-title);
+    font-size: var(--font-size-title);
+    font-weight: 900;
+    color: var(--text);
+}
+
+.sectionParagraph {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    color: var(--color-muted);
+    margin-top: var(--gap-sm);
+    width: 50%;
+}
+
+.imgWrapper {
+    display: flex;
+    gap: var(--gap-xl);
+    margin-top: var(--margin-3);
+}
+.imgContainer {
+    width: var(--container-sm);
+    height: var(--container-height);
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow);
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 300ms ease-in-out;
+}

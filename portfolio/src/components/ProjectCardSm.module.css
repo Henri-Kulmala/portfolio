@@ -18,7 +18,7 @@
     border: none;
 }
 
-.card:hover .cardImageWrapper {
+.card:hover .cardImage {
     transform: translateY(-10px);
 
 }
@@ -71,22 +71,25 @@
     margin: 0;
 }
 
-.cardImageWrapper {
-    display: flex;
-    width: 16rem;
-    height: 12rem;
-    padding: 0;
-    margin: 10% -10%;
-    box-shadow: var(--box-shadow);
-    transition: all 200ms ease-in-out;
-}
 
 
-.cardImage {
+.cardImageM {
     width: 16rem;
     height: 12rem;
     border-radius: var(--border-radius-lg);
     padding: 0;
+    margin: 10% -10%;
+    object-fit: cover no-repeat;
+    transition: all 200ms ease-in-out;
+
+}
+
+.cardImageS {
+    width: 8rem;
+    height: 14rem;
+    border-radius: var(--border-radius-lg);
+    padding: 0;
+    margin: 0 10%;
     object-fit: cover no-repeat;
     transition: all 200ms ease-in-out;
 
