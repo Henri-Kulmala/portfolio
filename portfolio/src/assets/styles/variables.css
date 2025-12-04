@@ -48,6 +48,9 @@
 
     --padding-1: 1rem;
     --padding-2: 1.5rem;
+    --padding-3: 2rem;
+    --padding-4: 2.5rem;
+    --padding-5: 3rem;
 
     --border-radius-sm: 0.25rem;
     --border-radius-md: 0.5rem;
@@ -58,6 +61,7 @@
 
     --container-sm: 20rem;
     --container-md: 27rem;
+    --container-lg: 36rem;
     --container-height: 20rem;
     --container-img-height: 12.5rem;
 

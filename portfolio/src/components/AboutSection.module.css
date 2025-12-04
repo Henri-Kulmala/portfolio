@@ -26,30 +26,6 @@
 }
 
 
-.textContent {
-    display: flex;
-    flex-direction: column;
-    max-width: 40rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.sectionTitle {
-    font-family: var(--font-title);
-    font-size: var(--font-size-title);
-    font-weight: 900;
-    color: var(--text);
-}
-
-.sectionParagraph {
-    font-family: var(--font-body);
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-body);
-    color: var(--color-muted);
-    margin-top: var(--gap-sm);
-    width: 50%;
-}
-
 .imgWrapper {
     display: flex;
     gap: var(--gap-xl);
@@ -68,4 +44,32 @@
     height: 100%;
     object-fit: cover;
     transition: transform 300ms ease-in-out;
+}
+
+.contactButton {
+    padding: var(--padding-2);
+    border-radius: var(--border-radius-lg);
+    border: none;
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-title);
+    font-family: var(--font-title);
+    background-color: #ce6941;
+    color: var(--color-white);
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: var(--box-shadow-2);
+    transition: all 250ms ease-in-out;
+    letter-spacing: 2px;
+}
+
+.contactButton:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: var(--box-shadow);
+}
+
+.contactButton:active {
+    background-color: #b34a21;
+    transform: scale(0.95);
+    box-shadow: var(--box-shadow);
 }

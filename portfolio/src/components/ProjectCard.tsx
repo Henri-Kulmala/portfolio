@@ -1,13 +1,21 @@
 import React from "react";
 import styles from "./ProjectCard.module.css";
 
+
 type ProjectCardProps = {
   cardTitle: string;
   cardDescription: string;
   imgSrc: string;
 };
 
-export default function ProjectCard({
+type ProjectCardSmProps = {
+  cardTitleSm: string;
+  cardDescriptionSm: string;
+  imgSrcSm: string;
+  imgSmall: boolean;
+};
+
+export function ProjectCard({
   cardTitle,
   cardDescription,
   imgSrc,
@@ -24,3 +32,24 @@ export default function ProjectCard({
     </div>
   );
 }
+
+export function ProjectCardSm({
+  cardTitleSm,
+  cardDescriptionSm,
+  imgSrcSm,
+  imgSmall,
+}: ProjectCardSmProps) {
+  return (
+    <div className={styles.cardSm}>
+      <div className={styles.cardTextSm}>
+        <h1 className={styles.cardHeaderSm}>{cardTitleSm}</h1>
+        <p className={styles.cardDescriptionSm}>{cardDescriptionSm}</p>
+      </div>
+      {imgSmall && (
+        <img className={styles.cardImageS} src={imgSrcSm} alt={cardTitleSm} />
+      )}
+      <img className={styles.cardImageM} src={imgSrcSm} alt={cardTitleSm} />
+    </div>
+  );
+}
+

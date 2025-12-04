@@ -1,0 +1,27 @@
+.modalContainer {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modalBackdrop {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-muted);
+}
+
+
+.modalContent {
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--padding-2);
+    max-width: var(--container-md);
+    width: min(100% - 2rem, var(--container-md));
+    box-shadow: var(--box-shadow);
+}

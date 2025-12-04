@@ -1,18 +1,20 @@
-.infoCard  {
+.infoCard {
     display: flex;
+    backface-visibility: hidden;
     flex-direction: column;
     gap: var(--gap-sm);
     padding: 0 var(--padding-2);
-    
+
 }
 
 .infoCardBack {
     display: flex;
     flex-direction: column;
+    backface-visibility: hidden;
     gap: var(--gap-sm);
     padding: 0 var(--padding-2);
     transform: rotateX(180deg);
-    
+
 }
 
 .textContent {
@@ -23,29 +25,9 @@
     justify-content: center;
 }
 
-.title {
-    font-family: var(--font-title);
-    font-size: var(--font-size-title);
-    font-weight: 900;
-    color: var(--text);
-}
 
-.header {
-    font-family: var(--font-title);
-    font-size: var(--font-size-header);
-    font-weight: 900;
-    color: var(--text);
-}
 
-.text {
-    font-family: var(--font-body);
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-body);
-    color: var(--color-muted);
-    margin-top: var(--gap-sm);
-}
-
-.contentWrapper{
+.contentWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,17 +1,18 @@
 import React from 'react'
-import styles from './InfoCard.module.css'
+import styles from './InfoCard.module.css';
+import text from '../assets/styles/text.module.css';
 
 export function InfoCardFront() {
   return (
     <div className={styles.infoCard}>
       <div className={styles.textContent}>
-        <h2 className={styles.title}>Front-end</h2>
-        <p className={styles.text}>
+        <h2 className={text.title}>Front-end</h2>
+        <p className={text.body}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quos.
         </p>
       </div>
       <div className={styles.contentWrapper}>
-        <h2 className={styles.header}>Tech Stack</h2>
+        <h2 className={text.header}>Tech Stack</h2>
 
         <div className={styles.content}>
           <div className={styles.techStack}>
@@ -42,13 +43,13 @@ export function InfoCardBack() {
     return (
       <div className={styles.infoCardBack}>
         <div className={styles.textContent}>
-          <h2 className={styles.title}>Back-end</h2>
-          <p className={styles.text}>
+          <h2 className={text.title}>Back-end</h2>
+          <p className={text.body}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quos.
           </p>
         </div>
         <div className={styles.contentWrapper}>
-          <h2 className={styles.header}>Tech Stack</h2>
+          <h2 className={text.header}>Tech Stack</h2>
 
           <div className={styles.content}>
             <div className={styles.techStack}>
