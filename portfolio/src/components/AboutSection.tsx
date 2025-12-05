@@ -40,7 +40,7 @@ export default function AboutSection({ onOpenContact }: AboutSectionProps) {
       </div>
 
       <div className={styles.containerRow}>
-        <button className={styles.contactButton} onClick={onOpenContact}>Ota yhteyttä</button>
+        <button className={styles.contactButton} onClick={toggleModal}>Ota yhteyttä</button>
         <Modal
           isOpen={openModal} onClose={() => setOpenModal(false)}>
           <ContactForm />
