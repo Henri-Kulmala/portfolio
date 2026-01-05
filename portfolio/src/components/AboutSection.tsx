@@ -21,30 +21,39 @@ export default function AboutSection({ onOpenContact }: AboutSectionProps) {
 
   return (
     <div className={styles.sectionWrapper}>
-      <div className={styles.containerRow}>
-        <div className={styles.textContent}>
-          <h1 className={text.title}>Hieman minusta</h1>
-          <p className={text.body}>
-            Hello! I'm Henri, a passionate software developer with a love for
-            creating innovative solutions. With a background in computer science
-            and years of experience in the industry, I specialize in building
-            web applications that are both functional and user-friendly.
-          </p>
-          <p className={text.body}>
-            When I'm not coding, you can find me exploring the outdoors, reading
-            tech blogs, or experimenting with new programming languages and
-            frameworks. I'm always eager to learn and take on new challenges.
-          </p>
-        </div>
-        <div className={styles.content}></div>
-      </div>
+      <div className={styles.content}>
+        <div className={styles.containerCol}>
+          <div className={styles.textContent}>
+            <h1 className={text.title}>Hieman minusta</h1>
+            <p className={text.body}>
+              Hello! I'm Henri, a passionate software developer with a love for
+              creating innovative solutions. With a background in computer
+              science and years of experience in the industry, I specialize in
+              building web applications that are both functional and
+              user-friendly.
+            </p>
+            <p className={text.body}>
+              When I'm not coding, you can find me exploring the outdoors,
+              reading tech blogs, or experimenting with new programming
+              languages and frameworks. I'm always eager to learn and take on
+              new challenges.
+            </p>
+          </div>
 
-      <div className={styles.containerRow}>
-        <button className={styles.contactButton} onClick={toggleModal}>Ota yhteyttä</button>
-        <Modal
-          isOpen={openModal} onClose={() => setOpenModal(false)}>
-          <ContactForm />
-        </Modal>
+          <div className={styles.buttonsWrapper}>
+            <button className={styles.contactButton} onClick={toggleModal}>
+              Ota yhteyttä
+            </button>
+            <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+              <ContactForm />
+            </Modal>
+
+            <button className={styles.contactButton} >
+              CV
+            </button>
+          </div>
+          
+        </div>
       </div>
 
       <div className={styles.card} onClick={handleClick}>

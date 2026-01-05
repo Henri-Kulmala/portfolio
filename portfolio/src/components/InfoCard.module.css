@@ -3,8 +3,16 @@
     backface-visibility: hidden;
     flex-direction: column;
     gap: var(--gap-sm);
-    padding: 0 var(--padding-2);
+    padding: var(--padding-2);
 
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow2);
+    transition: all 200ms ease-in-out;
+}
+
+.infoCard:hover {
+    scale: 0.97;
+    box-shadow: var(--box-shadow);
 }
 
 .infoCardBack {
@@ -12,9 +20,17 @@
     flex-direction: column;
     backface-visibility: hidden;
     gap: var(--gap-sm);
-    padding: 0 var(--padding-2);
+    padding: var(--padding-2);
     transform: rotateX(180deg);
 
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow2);
+    transition: all 200ms ease-in-out;
+}
+
+.infoCardBack:hover {
+    scale: 0.97;
+    box-shadow: var(--box-shadow);
 }
 
 .textContent {
@@ -37,7 +53,6 @@
 
 .content {
     display: flex;
-
     gap: var(--gap-sm);
 }
 

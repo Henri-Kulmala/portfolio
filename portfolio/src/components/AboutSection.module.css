@@ -14,11 +14,32 @@
     user-select: none;
 
 }
-.containerRow {
+
+.content {
     display: flex;
+    gap: var(--gap-sm);
     align-items: center;
     justify-content: center;
 }
+
+.containerRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-lg);
+
+
+}
+
+.containerCol {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-xl);
+    margin-top: var(--margin-3);
+    margin-bottom: var(--margin-3);
+}
+
 .card {
     display: flex;
     align-items: center;
@@ -29,11 +50,18 @@
 .textContent {
     display: flex;
     flex-direction: column;
-    max-width: 40rem;
+    max-width: 25vw;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    margin: 0;
+}
 
-
+.buttonsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap-md);
 }
 
 
@@ -43,6 +71,7 @@
     margin-top: var(--margin-3);
     user-select: none;
 }
+
 .imgContainer {
     width: var(--container-sm);
     height: var(--container-height);
@@ -76,18 +105,19 @@
     cursor: pointer;
     text-transform: uppercase;
     box-shadow: var(--box-shadow-2);
-    transition: all 250ms ease-in-out;
+    transition: all 200ms ease-in-out;
     letter-spacing: 2px;
+    user-select: none;
 }
 
 .contactButton:hover {
     background-color: var(--primary);
-    transform: scale(1.05);
+    transform: scale(0.95);
     box-shadow: var(--box-shadow);
 }
 
 .contactButton:active {
     background-color: #b34a21;
-    transform: scale(0.95);
+    transform: scale(0.92);
     box-shadow: var(--box-shadow);
 }

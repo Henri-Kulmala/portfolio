@@ -17,12 +17,6 @@ export default function HomeSection({ scrollTo }: { scrollTo: () => void }) {
     <div>
       <div className={styles.heroContainer}>
         <div className={styles.textContent}>
-          <h1 className={text.title}>Henri Kulmala</h1>
-          <p className={text.body}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            obcaecati sint distinctio qui repellat vel, soluta autem earum
-            officia maxime provident id ea at ipsam.
-          </p>
           <div className={styles.containerRow}>
             <button className={styles.contactButton} onClick={openContactModal}>
               Ota yhteyttä
@@ -31,11 +25,24 @@ export default function HomeSection({ scrollTo }: { scrollTo: () => void }) {
               {isContactOpen && <ContactForm />}
             </Modal>
           </div>
+          <h1 className={text.title}>Henri Kulmala</h1>
+          <p className={text.textDark}>
+            Helsinki, Finland · Open to remote / hybrid
+          </p>
+          <p className={text.textDark}>
+            BBA / Tradenomi (AMK), Information Technology
+          </p>
+          <p className={text.textDark}>Available for internships / full-time</p>
+
+          <p className={text.textDark}>
+            React · React Native · TypeScript · Node.js · REST APIs
+          </p>
         </div>
         <div className={styles.content}>
           <img className={styles.image} src={profilePic} alt="" />
         </div>
       </div>
+
       <div className={styles.heroFooter}>
         <div className={styles.iconContainer}>
           <IconCarousel />
