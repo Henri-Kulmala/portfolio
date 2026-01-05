@@ -90,3 +90,102 @@
     transition: all 200ms ease-in-out;
 
 }
+
+/* Project Card Small */
+
+.cardSm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--secondary);
+    padding: var(--padding-1);
+    border-radius: var(--border-radius-xl);
+    width: var(--container-sm);
+    height: var(--container-height);
+    flex-shrink: 0;
+    align-items: flex-end;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-inset);
+    transition: all 200ms ease-in-out;
+    user-select: none;
+    cursor: pointer;
+    border: none;
+}
+
+.cardSm:hover .cardImageSm {
+    transform: translateY(-10px);
+
+}
+
+.cardSm:hover {
+    transform: scale(1.1);
+    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-inset-hover);
+
+}
+
+.cardSm:hover .cardImageSm {
+    transform: scale(1.1);
+
+}
+
+.cardSm:hover .cardTextSm {
+    gap: var(--gap-lg);
+    transform: translateY(-5px);
+
+}
+
+.cardTextSm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    justify-content: right;
+    align-items: flex-end;
+    padding: var(--padding-2);
+    transition: all 200ms ease-in-out;
+
+}
+
+.cardHeaderSm {
+    font-size: var(--font-size-header);
+    font-weight: var(--font-weight-title);
+    font-family: var(--font-title);
+    color: var(--bg);
+    padding: 0;
+    margin: 0;
+}
+
+.cardDescriptionSm {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-text);
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    color: var(--bg);
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.cardImageM {
+    width: 16rem;
+    height: 12rem;
+    border-radius: var(--border-radius-lg);
+    padding: 0;
+    margin: 10% -10%;
+    object-fit: cover no-repeat;
+    transition: all 200ms ease-in-out;
+
+}
+
+.cardImageS {
+    width: 8rem;
+    height: 14rem;
+    border-radius: var(--border-radius-lg);
+    padding: 0;
+    margin: 0 10%;
+    object-fit: cover no-repeat;
+    transition: all 200ms ease-in-out;
+
+}

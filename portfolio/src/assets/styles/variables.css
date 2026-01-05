@@ -17,11 +17,14 @@
     --font-body: 'Skatta Sans', sans-serif;
 
     --font-size-body: 0.875rem;
-    --font-size-title: 3rem;
-    --font-size-header: 1.5rem;
     --font-size-nav: 1rem;
+    --font-size-header: 1.5rem;
+    --font-size-title: 3rem;
+    --font-size-title2: 2.25rem;
 
     --font-weight-body: 400;
+    --font-weight-body2: 500;
+    
     --font-weight-text: 600;
     --font-weight-title: 900;
 
@@ -48,6 +51,9 @@
 
     --padding-1: 1rem;
     --padding-2: 1.5rem;
+    --padding-3: 2rem;
+    --padding-4: 2.5rem;
+    --padding-5: 3rem;
 
     --border-radius-sm: 0.25rem;
     --border-radius-md: 0.5rem;
@@ -58,6 +64,7 @@
 
     --container-sm: 20rem;
     --container-md: 27rem;
+    --container-lg: 36rem;
     --container-height: 20rem;
     --container-img-height: 12.5rem;
 
@@ -65,6 +72,8 @@
 
     --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     --box-shadow2: rgba(0, 0, 0, 0.10) 0px 1px 5px;
+    --box-shadow3: rgba(0, 0, 0, 0.30) 0px 5px 10px;
+
     
     --box-shadow-inset: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     --box-shadow-inset-hover: rgba(50, 50, 93, 0) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0) 0px 18px 36px -18px inset;

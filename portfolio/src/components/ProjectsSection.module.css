@@ -34,21 +34,35 @@
 
 }
 
-.heroTitle {
+.projectInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--margin-1);
+    max-width: 30vw;
+    gap: var(--gap-sm);
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-2);
+
+}
+
+
+
+.infoTitle {
     font-family: var(--font-title);
-    font-size: var(--font-size-title);
-    font-weight: 900;
+    font-size: var(--font-size-header);
+    font-weight: var(--font-weight-title);
+    color: var(--primary);
+}
+
+.infoSubTitle {
+    font-family: var(--font-title);
+    font-size: var(--font-size-nav);
+    font-weight: var(--font-weight-text);
     color: var(--text);
-}
+    text-align: left;
 
-.heroSubtitle {
-    font-family: var(--font-body);
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-body);
-    color: var(--color-muted);
-    margin-top: var(--gap-sm);
-    width: 50%;
-}
 
+}
 
 

@@ -1,0 +1,80 @@
+.title {
+    font-family: var(--font-title);
+    font-size: var(--font-size-title);
+    font-weight: 900;
+    color: var(--text);
+    user-select: none;
+}
+
+.titleInteractive {
+    font-family: var(--font-title);
+    font-size: var(--font-size-title);
+    font-weight: 900;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.titleInteractive:hover {
+    color: var(--primary) ;
+    transform: scale(1.02);
+
+}
+
+.title2 {
+    font-family: var(--font-title);
+    font-size: var(--font-size-title2);
+    font-weight: 900;
+    color: var(--text);
+    user-select: none;
+}
+
+.header {
+
+    font-family: var(--font-title);
+    font-size: var(--font-size-header);
+    font-weight: 900;
+    color: var(--text);
+    user-select: none;
+}
+
+.body {
+
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    color: var(--color-muted);
+    margin-top: var(--gap-sm);
+    user-select: none;
+}
+
+.body2 {
+    font-family: var(--font-body);
+    font-size: var(--font-size-nav);
+    font-weight: var(--font-weight-body2);
+    color: var(--color-muted);
+    margin-top: var(--gap-sm);
+    user-select: none;
+}
+
+.text {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-text);
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    color: var(--bg);
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+.textDark {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-text);
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    color: var(--text);
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
