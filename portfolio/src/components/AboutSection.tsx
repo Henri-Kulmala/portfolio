@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import styles from "./AboutSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { KKHenkka, HettaPallas, Saaris } from "../assets/media";
@@ -8,13 +8,14 @@ import ContactForm from "./ContactForm";
 import Modal from "./Modal";
 
 type AboutSectionProps = {
-  onOpenContact: () => void;
+  onOpenContact?: () => void;
 };
 
-export default function AboutSection({ onOpenContact }: AboutSectionProps) {
+export default function AboutSection({ }: AboutSectionProps) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(true);
-  const handleClick = () => setIsFlipped(!isFlipped);
+  const handleClick = () => !isAnimating && setIsFlipped(!isFlipped);
+
 
   const [openModal, setOpenModal] = useState(false);
   const toggleModal = () => setOpenModal(!openModal);

@@ -16,6 +16,13 @@
     align-items: center;
     gap: var(--gap-md);
 
+    
+}
+
+.containerRow {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-lg);
 }
 
 .textContent {
@@ -48,7 +55,7 @@
 
 .scrollDown:hover .icon {
     transform: translateY(-10px);
-    
+
 }
 
 .heroFooter {
@@ -93,6 +100,30 @@
 }
 
 .contactButton:active {
+    background-color: #b34a21;
+    transform: scale(0.92);
+    box-shadow: var(--box-shadow);
+}
+
+.iconButton {
+    padding: var(--padding-1);
+    border-radius: var(--border-radius-lg);
+    border: none;
+    font-size: var(--font-size-body);
+    color: var(--bg);
+    background-color: #ce6941;
+    cursor: pointer;
+    box-shadow: var(--box-shadow-2);
+        transition: all 200ms ease-in-out;
+}
+
+.iconButton:hover {
+    background-color: var(--primary);
+    transform: scale(0.95);
+    box-shadow: var(--box-shadow);
+}
+
+.iconButton:active {
     background-color: #b34a21;
     transform: scale(0.92);
     box-shadow: var(--box-shadow);

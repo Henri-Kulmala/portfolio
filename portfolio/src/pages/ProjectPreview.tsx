@@ -1,8 +1,12 @@
-import React from 'react'
-import styles from './ProjectPreview.module.css'
-import text from '../assets/styles/text.module.css'
+import React from "react";
+import styles from "./ProjectPreview.module.css";
+import text from "../assets/styles/text.module.css";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { EcomLanding } from "../assets/media";
+import { EcomLanding, EcomVideo, EcomPlugin } from "../assets/media";
+import { useParams, Navigate } from "react-router-dom";
+
+
+
 
 export function BolenHella() {
   return (
@@ -36,12 +40,16 @@ export function BolenHella() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles.imageWrapper}>
-          <img
-            src={EcomLanding}
-            alt="Bölen Hella verkkokauppa"
-            className={styles.image}
-          />
+        <div className={styles.videoWrapper}>
+          <video
+            className={styles.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata">
+            <source src={EcomVideo} type="video/mp4" />
+          </video>
         </div>
       </div>
       <div className={styles.container}>
@@ -79,7 +87,13 @@ export function BolenHella() {
         </div>
       </div>
 
-      {/* Gif-video scrolldown*/}
+      <div className={styles.imageWrapper}>
+        <img
+          src={EcomPlugin}
+          alt="Verkkokaupan lisäosa"
+          className={styles.image}
+        />
+      </div>
 
       <div className={styles.container}>
         <div className={styles.textContent}>
@@ -102,4 +116,119 @@ export function BolenHella() {
   );
 }
 
-export default BolenHella;
+export function Tuotehallinta() {
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.header}>
+        <button className={styles.back} onClick={() => window.history.back()}>
+          <IoIosArrowRoundBack className={styles.icon} />
+          <span className={text.textDark}> Projektit </span>
+        </button>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.textContent}>
+          <h1 className={text.title}> Bölen Hella Tuotehallinta-sivu </h1>
+          <p className={text.body2}>
+            Tuotehallintasovellus ja tuotteiden listaus staattisella sivustolla
+          </p>
+          <div className={styles.row}>
+            <div className={styles.column}>
+              <p className={text.textDark}>Ajankohta</p>
+              <p className={text.body}>2025-</p>
+            </div>
+            <div className={styles.column}>
+              <p className={text.textDark}>Työkalut</p>
+              <p className={text.body}>
+                React, TypeScript, Node.js, Next.js cPanel, MySQL, Vite
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.container}>
+        <div className={styles.videoWrapper}>
+          <video
+            className={styles.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata">
+            <source src={EcomVideo} type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.textContent}>
+          <h1 className={text.title2}> Tarve & Tavoite</h1>
+          <p className={text.body2}>
+            
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.container}></div>
+      <div className={styles.container}>
+        <div className={styles.textContent}>
+          <h1 className={text.title2}> Toteutus</h1>
+          <p className={text.body2}>
+            Verkkokaupan suunnittelussa keskityin käyttäjäkokemukseen ja
+            helppokäyttöisyyteen. Käytin WordPressiä ja Woocommercea, jotka
+            tarjoavat joustavan alustan verkkokaupan rakentamiseen. Jatkuva
+            kommunikaatio asiakkaan kanssa varmisti , että verkkokauppa vastasi
+            heidän tarpeitaan ja odotuksiaan.
+          </p>
+        </div>
+        {/* Roadmap toteutuksen pääkohdista*/}
+        <div className={styles.imageWrapper}>
+          <img
+            src={EcomLanding}
+            alt="Bölen Hella verkkokauppa"
+            className={styles.image}
+          />
+        </div>
+      </div>
+
+      <div className={styles.imageWrapper}>
+        <img
+          src={EcomPlugin}
+          alt="Verkkokaupan lisäosa"
+          className={styles.image}
+        />
+      </div>
+
+      <div className={styles.container}>
+        <div className={styles.textContent}>
+          <h1 className={text.title2}> Räätälöity Wordpress-lisäosa </h1>
+          <p className={text.body2}>
+           
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
+
+
+const projectComponents: Record<string, React.ComponentType> = {
+  "bolen-hella": BolenHella,
+  tuotehallinta: Tuotehallinta,
+};
+
+export default function ProjectPreview() {
+  const { slug } = useParams<{ slug: string }>();
+
+  if (!slug) return <Navigate to="/projects" replace />;
+
+  const Selected = projectComponents[slug];
+
+  if (!Selected) return <Navigate to="/projects" replace />;
+
+  return <Selected />;
+}
+
+

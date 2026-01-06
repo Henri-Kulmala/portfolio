@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./HomeSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { IoChevronDown } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
 import { profilePic } from "../assets/media";
 import { IconCarousel } from "./IconCarousel";
 import Modal from "./Modal";
@@ -20,6 +21,17 @@ export default function HomeSection({ scrollTo }: { scrollTo: () => void }) {
           <div className={styles.containerRow}>
             <button className={styles.contactButton} onClick={openContactModal}>
               Ota yhteyttä
+            </button>
+            <button
+              className={styles.iconButton}
+              onClick={() =>
+                window.open(
+                  "https://github.com/Henri-Kulmala",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }>
+              <FaGithub size={32} />
             </button>
             <Modal isOpen={isContactOpen} onClose={closeContactModal}>
               {isContactOpen && <ContactForm />}

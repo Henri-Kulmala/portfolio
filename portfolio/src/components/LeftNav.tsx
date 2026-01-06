@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./LeftNav.module.css";
 
 export type Section = {
