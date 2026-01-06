@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./ProjectsSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { ProjectCard, ProjectCardSm } from "./ProjectCard";
@@ -34,7 +34,7 @@ export default function ProjectsSection() {
               cardTitle="Bölen Hella"
               cardDescription="Verkkokauppa"
               imgSrc={EComImg}
-              onClick={() => navigate('/projects/bolen-hella')}
+              onClick={() => navigate("/projects/bolen-hella")}
             />
           </div>
           <div className={styles.projectCard}>
@@ -43,7 +43,7 @@ export default function ProjectsSection() {
               cardDescriptionSm="Tuotehallintasovellus"
               imgSrcSm={ProductManagerImg}
               imgSmall={false}
-              onClick={() => navigate('/projects/tuotehallinta')}
+              onClick={() => navigate("/projects/tuotehallinta")}
             />
           </div>
         </div>
@@ -104,6 +104,13 @@ export default function ProjectsSection() {
               cardDescriptionSm="AI-avusteinen reseptisovellus"
               imgSrcSm={RuokakomeroMockup}
               imgSmall={true}
+              onClick={() =>
+                window.open(
+                  "https://github.com/Ruokakomero/Ruokakomero-App",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
             />
           </div>
         </div>

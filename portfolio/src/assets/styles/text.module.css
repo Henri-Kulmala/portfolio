@@ -3,7 +3,7 @@
     font-size: var(--font-size-title);
     font-weight: 900;
     color: var(--text);
-    user-select: none;
+    
 }
 
 .titleInteractive {
@@ -26,7 +26,7 @@
     font-size: var(--font-size-title2);
     font-weight: 900;
     color: var(--text);
-    user-select: none;
+    
 }
 
 .header {
@@ -35,7 +35,7 @@
     font-size: var(--font-size-header);
     font-weight: 900;
     color: var(--text);
-    user-select: none;
+    
 }
 
 .body {
@@ -45,7 +45,7 @@
     font-weight: var(--font-weight-body);
     color: var(--color-muted);
     margin-top: var(--gap-sm);
-    user-select: none;
+    
 }
 
 .body2 {
@@ -54,7 +54,7 @@
     font-weight: var(--font-weight-body2);
     color: var(--color-muted);
     margin-top: var(--gap-sm);
-    user-select: none;
+   
 }
 
 .text {
@@ -65,7 +65,7 @@
     color: var(--bg);
     padding: 0;
     margin: 0;
-    user-select: none;
+   
 }
 
 .textDark {
@@ -76,5 +76,5 @@
     color: var(--text);
     padding: 0;
     margin: 0;
-    user-select: none;
+
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 import {

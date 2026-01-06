@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from './InfoCard.module.css';
 import text from '../assets/styles/text.module.css';
 

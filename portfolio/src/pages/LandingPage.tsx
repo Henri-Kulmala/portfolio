@@ -1,4 +1,4 @@
-import React from "react";
+
 import LeftNav, { type Section } from "../components/LeftNav";
 import styles from "./LandingPage.module.css";
 import HomeSection from "../components/HomeSection";
