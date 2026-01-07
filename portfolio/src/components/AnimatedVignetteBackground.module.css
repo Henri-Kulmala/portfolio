@@ -1,0 +1,84 @@
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+
+  --mx: 0.2;
+  --my: 0.2;
+  --vig-intensity: 0.35;
+}
+
+.bg::before,
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  transform: translateZ(0);
+  will-change: transform, opacity, filter;
+}
+
+.bg::before {
+  background:
+    radial-gradient(70vmax 60vmax at calc(var(--mx) * 100%) calc(var(--my) * 100%),
+      rgba(255, 255, 255, 0.884),
+      rgba(255, 255, 255, 0.822) 15%),
+    radial-gradient(60vmax 45vmax at calc((1 - var(--mx)) * 100%) calc((1 - var(--my)) * 100%),
+      rgba(255, 255, 255, 0.74),
+      rgba(255, 255, 255, 0.849) 10%);
+  filter: blur(18px);
+  opacity: 0.9;
+  animation: drift 14s ease-in-out infinite alternate;
+}
+
+.bg::after {
+  background:
+    radial-gradient(120vmax 90vmax at 50% 80%,
+      rgba(0, 0, 0, calc(0.05 * var(--vig-intensity))),
+      rgba(0, 0, 0, calc(0.55 * var(--vig-intensity))) 55%,
+      rgba(0, 0, 0, calc(0.82 * var(--vig-intensity))) 100%),
+    radial-gradient(110vmax 85vmax at 50% 0%,
+      #FFFCF2,
+      rgba(0, 0, 0, calc(0.55 * var(--vig-intensity))) 300%,
+      rgba(0, 0, 0, calc(0.90 * var(--vig-intensity))) 100%);
+  mix-blend-mode: multiply;
+  opacity: 1;
+  animation: breathe 9.5s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(-1.5%, -1%, 0) scale(1.03);
+  }
+
+  100% {
+    transform: translate3d(1.2%, 1.4%, 0) scale(1.06);
+  }
+}
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    opacity: 0.95;
+    filter: blur(0px);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(0.5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .bg::before,
+  .bg::after {
+    animation: none;
+  }
+
+  .bg::before {
+    opacity: 0.75;
+  }
+}

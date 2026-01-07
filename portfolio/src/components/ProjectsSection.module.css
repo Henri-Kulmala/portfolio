@@ -15,11 +15,21 @@
 }
 
 .projectsWrapper {
-    display: flex;
-    gap: var(--gap-xl);
-    margin-top: var(--margin-3);
-    margin-bottom: var(--margin-3);
+    width: 100%;
+    max-width: 1200px;
+    margin-top: var(--margin-2);
 }
+
+.projectCards {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 
 
 

@@ -80,6 +80,26 @@
 }
 
 
+ .cardTitle {
+     font-size: var(--font-size-header);
+     font-weight: var(--font-weight-title);
+     font-family: var(--font-title);
+     color: var(--bg);
+     padding: 0;
+     margin: 0;
+ }
+
+ .cardText {
+     font-size: var(--font-size-body);
+     font-weight: var(--font-weight-text);
+     font-family: var(--font-body);
+     letter-spacing: 0.5px;
+     color: var(--bg);
+     padding: 0;
+     margin: 0;
+ }
+
+
 
 /*  Mobile */
 

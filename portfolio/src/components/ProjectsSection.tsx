@@ -29,20 +29,19 @@ export default function ProjectsSection() {
           </p>
         </div>
         <div className={styles.projectsWrapper}>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCards}>
+            <ProjectCardSm
+              title="Tuotehallinta"
+              description="Tuotehallintasovellus"
+              imgSrc={ProductManagerImg}
+              onClick={() => navigate("/projects/tuotehallinta")}
+            />
+
             <ProjectCard
-              cardTitle="Bölen Hella"
-              cardDescription="Verkkokauppa"
+              title="Bölen Hella"
+              description="Verkkokauppa"
               imgSrc={EComImg}
               onClick={() => navigate("/projects/bolen-hella")}
-            />
-          </div>
-          <div className={styles.projectCard}>
-            <ProjectCardSm
-              cardTitleSm="Tuotehallinta"
-              cardDescriptionSm="Tuotehallintasovellus"
-              imgSrcSm={ProductManagerImg}
-              onClick={() => navigate("/projects/tuotehallinta")}
             />
           </div>
         </div>
@@ -97,11 +96,18 @@ export default function ProjectsSection() {
           </p>
         </div>
         <div className={styles.projectsWrapper}>
-          <div className={styles.projectCard}>
+          <div className={styles.projectCards}>
+            <ProjectCard
+              title="Bölen Hella"
+              description="Verkkokauppa"
+              imgSrc={EComImg}
+              onClick={() => navigate("/projects/bolen-hella")}
+            />
+
             <ProjectCardSm
-              cardTitleSm="Ruokakomero"
-              cardDescriptionSm="AI-avusteinen reseptisovellus"
-              imgSrcSm={RuokakomeroMockup}
+              title="Ruokakomero"
+              description="AI-avusteinen reseptisovellus"
+              imgSrc={RuokakomeroMockup}
               onClick={() =>
                 window.open(
                   "https://github.com/Ruokakomero/Ruokakomero-App",
