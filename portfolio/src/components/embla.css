@@ -1,14 +1,12 @@
-.embla__container {
-    display: flex;
-
-}
-
 .embla {
-    max-width: 50rem;
-    margin: auto;
+    width: 100%;
+    max-width: min(50rem, 100%);
+    min-width: 0;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: var(--border-radius-sm);
-
+    user-select: none;
+    box-sizing: border-box;
     mask-image: linear-gradient(to right,
             transparent 0%,
             black 25%,
@@ -19,12 +17,33 @@
             black 25%,
             black 75%,
             transparent 100%);
-    user-select: none;
 }
 
+.embla__container {
+    display: flex;
+    align-items: center;
+    will-change: transform;
+    min-width: 0;
+}
 
 .embla__slide {
-    display: flex;
     flex: 0 0 auto;
     padding-left: var(--padding-1);
+    min-width: 0;
+}
+
+.embla__slide img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 480px) {
+    .embla {
+        width: 100%;
+    }
+
+    .embla__container {
+        padding: 0 0.5rem;
+    }
 }

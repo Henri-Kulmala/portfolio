@@ -74,3 +74,52 @@
     user-select: none;
     transition: all 250ms ease-in-out;
 }
+
+/* Mobile */
+
+@media only screen and (max-width: 768px) {
+    .navWrapper {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        background-color: var(--color-light-muted);
+        padding: 1rem 0;
+        margin: 0 0;
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .navList {
+        display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+        
+
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 1rem;
+            box-sizing: border-box;
+    }
+
+    .navItem {
+        padding: 0;
+        min-width: 0;
+        flex: 0 0 auto;
+    }
+
+    
+          .navLabelActive {
+              display: inline;
+              white-space: nowrap;
+          }
+
+}

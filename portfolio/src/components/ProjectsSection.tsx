@@ -42,14 +42,13 @@ export default function ProjectsSection() {
               cardTitleSm="Tuotehallinta"
               cardDescriptionSm="Tuotehallintasovellus"
               imgSrcSm={ProductManagerImg}
-              imgSmall={false}
               onClick={() => navigate("/projects/tuotehallinta")}
             />
           </div>
         </div>
         <div className={styles.containerRow}>
           <div className={styles.projectInfo}>
-            <h1 className={styles.infoTitle}>
+            <h1 className={text.title2}>
               Bölen Hella - verkkokauppa & tuotehallinta
             </h1>
             <p className={text.body}>
@@ -63,7 +62,7 @@ export default function ProjectsSection() {
             </p>
 
             <div className={styles.projectInfoContent}>
-              <h1 className={styles.infoSubTitle}>Tekninen toteutus</h1>
+              <h1 className={text.header}>Tekninen toteutus</h1>
               <p className={text.body}>
                 Järjestelmä koostuu React + Vite -pohjaisesta
                 admin-käyttöliittymästä sekä Next.js:llä toteutetusta
@@ -73,7 +72,7 @@ export default function ProjectsSection() {
                 kokonaisuus on julkaistu pilviympäristöihin: frontend cPanelissa
                 ja backend Render-palvelussa.
               </p>
-              <h1 className={styles.infoSubTitle}>Tietoturva ja käyttö</h1>
+              <h1 className={text.header}>Tietoturva ja käyttö</h1>
               <p className={text.body}>
                 Tietoturva on huomioitu sovelluksen kaikilla tasoilla:
                 API-reitit on suojattu token-pohjaisella varmennuksella,
@@ -103,7 +102,6 @@ export default function ProjectsSection() {
               cardTitleSm="Ruokakomero"
               cardDescriptionSm="AI-avusteinen reseptisovellus"
               imgSrcSm={RuokakomeroMockup}
-              imgSmall={true}
               onClick={() =>
                 window.open(
                   "https://github.com/Ruokakomero/Ruokakomero-App",

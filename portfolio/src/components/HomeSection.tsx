@@ -59,9 +59,13 @@ export default function HomeSection({ scrollTo }: { scrollTo: () => void }) {
         <div className={styles.iconContainer}>
           <IconCarousel />
         </div>
-        <div className={styles.scrollDown}>
+
+        {/*
+          <div className={styles.scrollDown}>
           <IoChevronDown className={styles.icon} onClick={scrollTo} />
         </div>
+
+      */}
       </div>
     </div>
   );

@@ -13,7 +13,6 @@ type ProjectCardSmProps = {
   cardTitleSm: string;
   cardDescriptionSm: string;
   imgSrcSm: string;
-  imgSmall: boolean;
   onClick?: () => void;
 };
 
@@ -40,7 +39,6 @@ export function ProjectCardSm({
   cardTitleSm,
   cardDescriptionSm,
   imgSrcSm,
-  imgSmall,
   onClick,
 }: ProjectCardSmProps) {
   return (
@@ -49,10 +47,7 @@ export function ProjectCardSm({
         <h1 className={styles.cardHeaderSm}>{cardTitleSm}</h1>
         <p className={styles.cardDescriptionSm}>{cardDescriptionSm}</p>
       </div>
-      {imgSmall && (
-        <img className={styles.cardImageS} src={imgSrcSm} alt={cardTitleSm} />
-      )}
-      <img className={styles.cardImageM} src={imgSrcSm} alt={cardTitleSm} />
+      <img className={styles.cardImageS} src={imgSrcSm} alt={cardTitleSm} />
     </div>
   );
 }
