@@ -1,0 +1,146 @@
+.timeline {
+    display: grid;
+    gap: 16px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    align-items: start;
+}
+
+.rail {
+    position: relative;
+    width: 28px;
+    display: grid;
+    justify-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: currentColor;
+    margin-top: 18px;
+    opacity: 0.9;
+}
+
+.line {
+    width: 2px;
+    height: calc(100% - 10px);
+    margin-top: 10px;
+    opacity: 0.15;
+    background: currentColor;
+}
+
+.card {
+    --card-bg: rgba(255, 255, 255, 0.6);
+    appearance: none;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 16px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cardSm {
+    --card-bg: rgba(253, 235, 228, 0.6);
+    appearance: none;
+    border: 1px solid #eb5f2857;
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 16px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.card:focus-visible,
+.cardSm:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.header {
+    display: grid;
+    gap: 8px;
+}
+
+.orgRow {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tags {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: rgba(255, 255, 255, 0.6);
+    opacity: 0.85;
+}
+
+.descWrap {
+    margin-top: 12px;
+}
+
+.descInner {
+    position: relative;
+}
+
+.desc {
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.descClosed {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.descOpen {
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        gap: 12px;
+    }
+
+    .item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .rail {
+        width: 100%;
+        display: none;
+    }
+
+    .card,
+    .cardSm {
+        border-radius: 14px;
+        padding: 14px;
+    }
+
+    .orgRow {
+        gap: 8px;
+    }
+
+    .descClosed {
+        -webkit-line-clamp: 4;
+    }
+}

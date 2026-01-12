@@ -1,4 +1,3 @@
-
 .sectionWrapper {
     display: flex;
     flex-direction: column;
@@ -8,7 +7,7 @@
     gap: var(--gap-xl);
 }
 
-.containerRow{
+.containerRow {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,11 +15,21 @@
 }
 
 .projectsWrapper {
-    display: flex;
-    gap: var(--gap-xl);
-    margin-top: var(--margin-3);
-    margin-bottom: var(--margin-3);
+    width: 100%;
+    max-width: 1200px;
+    margin-top: var(--margin-2);
 }
+
+.projectCards {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 
 
 
@@ -66,3 +75,82 @@
 }
 
 
+
+/*  Mobile */
+
+@media only screen and (max-width: 480px) {
+
+    .sectionWrapper {
+        padding: var(--padding-1);
+        gap: var(--gap-sm);
+    }
+
+    .projectsWrapper {
+        flex-direction: column;
+        padding: var(--padding-2);
+        gap: var(--gap-sm);
+        margin-top: var(--margin-2);
+        margin-bottom: var(--margin-2);
+        align-items: center;
+    }
+
+    .containerRow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projectsWrapper {
+        display: flex;
+        gap: var(--gap-xl);
+        margin-top: var(--margin-3);
+        margin-bottom: var(--margin-3);
+    }
+
+
+
+    .textContent {
+        display: flex;
+        flex-direction: column;
+        max-width: 80vw;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .projectInfo {
+        display: flex;
+        flex-direction: column;
+        margin-top: var(--margin-1);
+        max-width: 80vw;
+        gap: var(--gap-sm);
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-2);
+
+    }
+
+
+
+    .infoTitle {
+        font-family: var(--font-title);
+        font-size: var(--font-size-header-mobile);
+        font-weight: var(--font-weight-title);
+        color: var(--primary);
+    }
+
+    .infoSubTitle {
+        font-family: var(--font-title);
+        font-size: var(--font-size-nav-mobile);
+        font-weight: var(--font-weight-text);
+        color: var(--text);
+        text-align: left;
+
+
+    }
+
+
+
+}

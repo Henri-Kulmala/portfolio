@@ -1,21 +1,26 @@
-
-import { Routes, Route, Navigate } from 'react-router-dom'
-import LandingPage from './pages/LandingPage'
-import ProjectPreview from './pages/ProjectPreview'
-
+import { Routes, Route, Navigate } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import ProjectPreview from "./pages/ProjectPreview";
+import AnimatedBlobBackground from "./components/AnimatedBlobBackground";
+import CvPage from "./pages/CvPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-
-
   return (
-    <Routes>
-      <Route path = "/" element = {<LandingPage />}/>
-      <Route path = "/projects/:slug" element = {<ProjectPreview />}/>
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <div style={{ position: "relative", minHeight: "100vh" }}>
       
-    
-  )
+      <AnimatedBlobBackground strength={0.8} />
+      <ScrollToTop />
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/projects/:slug" element={<ProjectPreview />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/cv" element={<CvPage />} />
+        </Routes>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
