@@ -32,7 +32,7 @@ export default function LandingPage() {
       />
       <main className={styles.content}>
         <section id="home" className={styles.section}>
-          <HomeSection scrollTo={() => handleNavigate("projects")} />
+          <HomeSection  />
         </section>
         <section id="projects" className={styles.section}>
           <ProjectsSection />

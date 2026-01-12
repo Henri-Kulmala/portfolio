@@ -1,14 +1,13 @@
 import { useState } from "react";
 import styles from "./HomeSection.module.css";
 import text from "../assets/styles/text.module.css";
-import { IoChevronDown } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { profilePic } from "../assets/media";
 import { IconCarousel } from "./IconCarousel";
 import Modal from "./Modal";
 import ContactForm from "./ContactForm";
 
-export default function HomeSection({ scrollTo }: { scrollTo: () => void }) {
+export default function HomeSection() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   const openContactModal = () => setIsContactOpen(true);
@@ -60,9 +59,6 @@ export default function HomeSection({ scrollTo }: { scrollTo: () => void }) {
           <IconCarousel />
         </div>
 
-        <div className={styles.scrollDown}>
-          <IoChevronDown className={styles.icon} onClick={scrollTo} />
-        </div>
       </div>
     </div>
   );

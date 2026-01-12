@@ -2,21 +2,19 @@ import  { useState } from "react";
 import styles from "./AboutSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { KKHenkka, HettaPallas, Saaris } from "../assets/media";
-import { InfoCardFront, InfoCardBack } from "./InfoCard";
-import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
 import Modal from "./Modal";
+import { useNavigate } from "react-router-dom";
 
 type AboutSectionProps = {
   onOpenContact?: () => void;
 };
 
 export default function AboutSection({ }: AboutSectionProps) {
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(true);
-  const handleClick = () => !isAnimating && setIsFlipped(!isFlipped);
 
 
+
+  const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(false);
   const toggleModal = () => setOpenModal(!openModal);
 
@@ -27,17 +25,17 @@ export default function AboutSection({ }: AboutSectionProps) {
           <div className={styles.textContent}>
             <h1 className={text.title}>Hieman minusta</h1>
             <p className={text.body}>
-              Hello! I'm Henri, a passionate software developer with a love for
-              creating innovative solutions. With a background in computer
-              science and years of experience in the industry, I specialize in
-              building web applications that are both functional and
-              user-friendly.
+              Hei! Olen Henri, intohimoinen ohjelmistokehittäjä, jolla on vahva
+              halu luoda innovatiivisia ratkaisuja. Taustani on
+              tietojenkäsittelytieteessä ja minulla on usean vuoden kokemus
+              alalta. Erikoistun web-sovellusten kehittämiseen siten, että ne
+              ovat sekä toiminnallisia että käyttäjäystävällisiä.
             </p>
             <p className={text.body}>
-              When I'm not coding, you can find me exploring the outdoors,
-              reading tech blogs, or experimenting with new programming
-              languages and frameworks. I'm always eager to learn and take on
-              new challenges.
+              Kun en koodaa, minut löytää usein ulkoilemasta, lukemasta
+              teknologia-aiheisia blogeja tai kokeilemassa uusia
+              ohjelmointikieliä ja -kehyksiä. Olen aina halukas oppimaan uutta
+              ja tarttumaan uusiin haasteisiin.
             </p>
           </div>
 
@@ -49,24 +47,13 @@ export default function AboutSection({ }: AboutSectionProps) {
               <ContactForm />
             </Modal>
 
-            <button className={styles.contactButton} >
+            <button
+              className={styles.contactButton}
+              onClick={() => navigate("/cv")}>
               CV
             </button>
           </div>
-          
         </div>
-      </div>
-
-      <div className={styles.card} onClick={handleClick}>
-        <motion.div
-          className={styles.infoCardWrapper}
-          initial={false}
-          animate={{ rotateX: isFlipped ? 180 : 360 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          onAnimationComplete={() => setIsAnimating(false)}>
-          <InfoCardFront />
-          <InfoCardBack />
-        </motion.div>
       </div>
 
       <div className={styles.containerRow}>

@@ -10,8 +10,10 @@ export { default as PythonIcon } from './icons/Python.svg';
 export { default as SQLIcon } from './icons/SQL.svg';
 export { default as DockerIcon } from './icons/Docker.svg';
 export { default as WPIcon } from './icons/WP.svg';
+export { default as HKLogo } from './icons/HKLogo.svg';
 
 
+export { default as Treenikamu } from './projects/Treenikamu/Treenikamu.svg';
 export { default as ProductManagerImg } from './Tuotehallinta.svg';
 export { default as EComImg } from './Bölen Hella.png';
 export { default as BölenLogo } from './projects/ECommerce/Bölen Hella.svg';

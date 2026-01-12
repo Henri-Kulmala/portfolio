@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ProjectPreview.module.css";
 import text from "../assets/styles/text.module.css";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { EcomLanding, EcomVideo, EcomPlugin } from "../assets/media";
+import { EcomLanding, EcomVideo, EcomPlugin, EcomCatering } from "../assets/media";
 import { useParams, Navigate } from "react-router-dom";
 
 
@@ -32,7 +32,7 @@ export function BolenHella() {
             <div className={styles.column}>
               <p className={text.textDark}>Työkalut</p>
               <p className={text.body}>
-                Wordpress, Woocommerce, Javascript, PHP, HTML, Adobe Illustrator
+                Wordpress, Woocommerce, Javascript, PHP, Adobe Illustrator
               </p>
             </div>
           </div>
@@ -73,26 +73,18 @@ export function BolenHella() {
             Verkkokaupan suunnittelussa keskityin käyttäjäkokemukseen ja
             helppokäyttöisyyteen. Käytin WordPressiä ja Woocommercea, jotka
             tarjoavat joustavan alustan verkkokaupan rakentamiseen. Jatkuva
-            kommunikaatio asiakkaan kanssa varmisti , että verkkokauppa vastasi
+            kommunikaatio asiakkaan kanssa varmistaa , että verkkokauppa vastaa
             heidän tarpeitaan ja odotuksiaan.
           </p>
         </div>
         {/* Roadmap toteutuksen pääkohdista*/}
         <div className={styles.imageWrapper}>
           <img
-            src={EcomLanding}
+            src={EcomCatering}
             alt="Bölen Hella verkkokauppa"
             className={styles.image}
           />
         </div>
-      </div>
-
-      <div className={styles.imageWrapper}>
-        <img
-          src={EcomPlugin}
-          alt="Verkkokaupan lisäosa"
-          className={styles.image}
-        />
       </div>
 
       <div className={styles.container}>
@@ -111,6 +103,14 @@ export function BolenHella() {
             ydintoiminnallisuuksista.
           </p>
         </div>
+      </div>
+
+      <div className={styles.imageWrapper}>
+        <img
+          src={EcomPlugin}
+          alt="Verkkokaupan lisäosa"
+          className={styles.image}
+        />
       </div>
     </div>
   );

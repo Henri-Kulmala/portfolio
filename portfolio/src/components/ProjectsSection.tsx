@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-import { EComImg, ProductManagerImg, RuokakomeroMockup } from "../assets/media";
+import { EComImg, ProductManagerImg, RuokakomeroMockup, Treenikamu } from "../assets/media";
 
 
 
@@ -97,11 +97,17 @@ export default function ProjectsSection() {
         </div>
         <div className={styles.projectsWrapper}>
           <div className={styles.projectCards}>
-            <ProjectCard
-              title="Bölen Hella"
-              description="Verkkokauppa"
-              imgSrc={EComImg}
-              onClick={() => navigate("/projects/bolen-hella")}
+            <ProjectCardSm
+              title="Treenikamu-sovellus"
+              description="Liikunta- ja hyvinvointisovellus"
+              imgSrc={Treenikamu}
+              onClick={() =>
+                window.open(
+                  "https://github.com/Henri-Kulmala/Treenikamu-app",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
             />
 
             <ProjectCardSm
