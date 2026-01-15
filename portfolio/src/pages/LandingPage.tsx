@@ -25,14 +25,17 @@ export default function LandingPage() {
 
   return (
     <div className={styles.page}>
-      <LeftNav
-        sections={SECTIONS}
-        activeSection={activeSection}
-        onNavigate={handleNavigate}
-      />
+      <div className={styles.navbar}>
+        <LeftNav
+          sections={SECTIONS}
+          activeSection={activeSection}
+          onNavigate={handleNavigate}
+        />
+      </div>
+
       <main className={styles.content}>
         <section id="home" className={styles.section}>
-          <HomeSection  />
+          <HomeSection />
         </section>
         <section id="projects" className={styles.section}>
           <ProjectsSection />

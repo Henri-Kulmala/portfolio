@@ -7,7 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div style={{ position: "relative", minHeight: "100vh" }}>
+    <div style={{ position: "relative", minHeight: "100vh"}}>
       
       <AnimatedBlobBackground strength={0.8} />
       <ScrollToTop />
