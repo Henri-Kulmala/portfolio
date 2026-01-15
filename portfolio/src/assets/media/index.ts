@@ -24,6 +24,9 @@ export { default as EcomVideo } from './projects/ECommerce/Screen recording.mp4'
 export { default as PMAdmin } from './projects/ProductManager/Admin panel.jpg';
 export { default as PMListing } from './projects/ProductManager/Product listing.jpg';
 export { default as PMListingOpen } from './projects/ProductManager/Product listing-open.jpg';
+export { default as ScreenCap } from './projects/ProductManager/ScreenCap.mp4';
+export { default as ScreenCap2 } from './projects/ProductManager/ScreenCap2.mp4';
+export { default as LoginScreen } from './projects/ProductManager/login.jpg';
 export { default as RuokakomeroMockup } from './projects/Ruokakomero-app/Ruokakomero-mockup.svg';
 export { default as RuokakomeroRecipe } from './projects/Ruokakomero-app/Ruokakomero-reseptivalitsin.png';
 export { default as RuokakomeroGeneratedRecipe } from './projects/Ruokakomero-app/Ruokakomero-ruokaehdotus.png';

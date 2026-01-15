@@ -15,9 +15,12 @@
 }
 
 .projectsWrapper {
+    display: flex;
     width: 100%;
     max-width: 1200px;
     margin-top: var(--margin-2);
+    justify-content: center;
+    align-items: center;
 }
 
 .projectCards {

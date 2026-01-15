@@ -24,14 +24,14 @@ export default function AboutSection({ }: AboutSectionProps) {
         <div className={styles.containerCol}>
           <div className={styles.textContent}>
             <h1 className={text.title}>Hieman minusta</h1>
-            <p className={text.body}>
+            <p className={text.body2}>
               Hei! Olen Henri, intohimoinen ohjelmistokehittäjä, jolla on vahva
               halu luoda innovatiivisia ratkaisuja. Taustani on
               tietojenkäsittelytieteessä ja minulla on usean vuoden kokemus
               alalta. Erikoistun web-sovellusten kehittämiseen siten, että ne
               ovat sekä toiminnallisia että käyttäjäystävällisiä.
             </p>
-            <p className={text.body}>
+            <p className={text.body2}>
               Kun en koodaa, minut löytää usein ulkoilemasta, lukemasta
               teknologia-aiheisia blogeja tai kokeilemassa uusia
               ohjelmointikieliä ja -kehyksiä. Olen aina halukas oppimaan uutta
