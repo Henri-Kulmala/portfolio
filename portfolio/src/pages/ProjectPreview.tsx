@@ -94,15 +94,15 @@ export function BolenHella() {
         <div className={styles.textContent}>
           <h1 className={text.title2}>Tarve &amp; Tavoite</h1>
           <p className={text.body2}>
-            Bölen Hella on paikallinen ruokakauppa, joka palvelee asiakkaitaan
-            laadukkailla tuotteilla ja henkilökohtaisella asiakaspalvelulla.
-            Projektin lähtökohtana oli tarve tuoda catering-palvelut selkeämmin
+            Bölen Hella eli K-Supermarket Triplan keittiö & palvelutiski, joka palvelee asiakkaitaan
+            laadukkailla tuotteilla ja henkilökohtaisella asiakaspalvelulla. 
+            Projektin lähtökohtana oli tarve tuoda Bölen Catering-palvelut selkeämmin
             saataville myös verkossa ja helpottaa tilaamista erityisesti
             ennakkotilausten osalta.
           </p>
           <p className={text.body2}>
             Tavoitteena oli toteuttaa käyttäjäystävällinen ja visuaalisesti
-            houkutteleva verkkokauppa, joka heijastaa Bölen Hellan brändiä ja
+            houkutteleva verkkokauppa, joka heijastaa Bölen Hellan/Cateringin brändiä ja
             arvoja, mutta toimii samalla käytännöllisenä työkaluna sekä
             asiakkaille että henkilökunnalle. Verkkokaupan tuli olla helposti
             ylläpidettävä, skaalautuva ja yhteensopiva asiakkaan olemassa
@@ -148,13 +148,18 @@ export function BolenHella() {
             className={styles.image}
           />
         </div>
+        <div className={styles.imageWrapper}>
+          <img
+            src={EcomCatering}
+            alt="Bölen Hella verkkokauppa"
+            className={styles.image}
+          />
+        </div>
       </div>
 
       <div className={styles.container}>
         <div className={styles.textContent}>
-          <h1 className={text.title2} id="plugin">
-            Räätälöity WordPress-lisäosa
-          </h1>
+          <h1 className={text.title2}>Räätälöity WordPress-lisäosa</h1>
           <p className={text.body2}>
             Osana projektia jatkokehitin avoimen lähdekoodin WordPress-lisäosaa
             <em>Weight-based product pricing</em>, joka mahdollistaa tuotteiden
@@ -174,7 +179,7 @@ export function BolenHella() {
         </div>
       </div>
 
-      <div className={styles.imageWrapper}>
+      <div className={styles.imageWrapper} id="plugin">
         <img
           src={EcomPlugin}
           alt="Verkkokaupan lisäosa"

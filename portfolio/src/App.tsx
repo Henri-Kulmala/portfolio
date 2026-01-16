@@ -7,11 +7,11 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div style={{ position: "relative", minHeight: "100vh"}}>
+    <div style={{ position: "relative", minHeight: "100vh", maxWidth: "100%" }}>
       
       <AnimatedBlobBackground strength={0.8} />
       <ScrollToTop />
-      <div style={{ position: "relative", zIndex: 1 }}>
+      <div style={{ position: "relative", zIndex: 1, maxWidth: "100%" }}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/projects/:slug" element={<ProjectPreview />} />

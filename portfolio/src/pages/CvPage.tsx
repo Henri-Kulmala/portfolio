@@ -56,7 +56,7 @@ export default function BolenHella() {
           <div className={styles.textContent}>
             <h1 className={text.titleLight}>Asiakasprojektit</h1>
           </div>
-            <div className={styles.innerContent}>
+          <div className={styles.innerContent}>
             <CvRoadmapSm
               items={[
                 {
@@ -87,36 +87,33 @@ export default function BolenHella() {
                 },
               ]}
             />
-            </div>
-            <div className={styles.innerContent}>
-              <CvRoadmapSm
-                items={[
-                  {
-                    title: "Catering-palvelun verkkokauppa",
-                    org: "Tmi Henri Kulmala",
-                    period: "8/2025-",
-                    tags: [
-                      "Wordpress",
-                      "React",
-                      "Node.js",
-                      "Graafinen suunnittelu",
-                    ],
-                    description: (
-                      <>
-                        Suunnittelin ja toteutin Wordpress-pohjaisen
-                        verkkokaupan catering-palvelulle. Toteutus sisältää
-                        verkkokauppasivujen lisäksi räätälöidyn
-                        Wordpress-lisäosan sekä React/Node.js-pohjaisen
-                        web-sovelluksen tuotteiden esittelyä ja hallintaa
-                        varten.
-                      </>
-                    ),
-                  },
-                ]}
-              />
-              
-            </div>
-          
+          </div>
+          <div className={styles.innerContent}>
+            <CvRoadmapSm
+              items={[
+                {
+                  title: "Catering-palvelun verkkokauppa",
+                  org: "Tmi Henri Kulmala",
+                  period: "8/2025-",
+                  tags: [
+                    "Wordpress",
+                    "React",
+                    "Node.js",
+                    "Graafinen suunnittelu",
+                  ],
+                  description: (
+                    <>
+                      Suunnittelin ja toteutin Wordpress-pohjaisen verkkokaupan
+                      catering-palvelulle.  Toteutus sisältää verkkokauppasivujen
+                      lisäksi räätälöidyn Wordpress-lisäosan sekä
+                      React/Node.js-pohjaisen web-sovelluksen tuotteiden
+                      esittelyä ja hallintaa varten.
+                    </>
+                  ),
+                },
+              ]}
+            />
+          </div>
         </div>
         <div className={styles.content}>
           <CvRoadmap
@@ -155,14 +152,19 @@ export default function BolenHella() {
           <CvRoadmap
             items={[
               {
-                title: "Ylioppilas",
-                org: "Vihdin Lukio, Vihti",
-                period: "2017-2020",
+                title: "Tradenomi, Tietojenkäsittely - Ohjelmistokehitys",
+                org: "Haaga-Helian Ammattikorkeakoulu, Helsinki",
+                period: "8/2023-",
+
                 description: (
                   <>
-                    Toimin lukiovuosina opiskelijakunnan hallituksen jäsenenä,
-                    ylläpidin Luurihuolto NY-yritystä ja ansaitsin arvosanan 10
-                    lukiodiplomin kuvataiteesta.
+                    Suoritan parhaillaan tietojenkäsittelyn tradenomin
+                    tutkintoa, ohjelmistokehitykseen erikoistuneena.
+                    Suorittamiini kursseihin sisältyy mm.
+                    Ohjelmistoprojekti-kursseja, eri koodikielten syventäviä
+                    kursseja ja DevOps-aiheisia kursseja.
+                    Ohjelmistoprojekti-kursseilla toiminut
+                    ryhmän-/tiiminvetäjänä. Arvioitu valmistumisaika 12/2026.
                   </>
                 ),
               },
@@ -189,24 +191,19 @@ export default function BolenHella() {
               },
             ]}
           />
-          </div>
+        </div>
         <div className={styles.content}>
           <CvRoadmap
             items={[
               {
-                title: "Tradenomi, Tietojenkäsittely - Ohjelmistokehitys",
-                org: "Haaga-Helian Ammattikorkeakoulu, Helsinki",
-                period: "8/2023-",
-
+                title: "Ylioppilas",
+                org: "Vihdin Lukio, Vihti",
+                period: "2017-2020",
                 description: (
                   <>
-                    Suoritan parhaillaan tietojenkäsittelyn tradenomin
-                    tutkintoa, ohjelmistokehitykseen erikoistuneena.
-                    Suorittamiini kursseihin sisältyy mm.
-                    Ohjelmistoprojekti-kursseja, eri koodikielten syventäviä
-                    kursseja ja DevOps-aiheisia kursseja.
-                    Ohjelmistoprojekti-kursseilla toiminut
-                    ryhmän-/tiiminvetäjänä. Arvioitu valmistumisaika 12/2026.
+                    Toimin lukiovuosina opiskelijakunnan hallituksen jäsenenä,
+                    ylläpidin Luurihuolto NY-yritystä ja ansaitsin arvosanan 10
+                    lukiodiplomin kuvataiteesta.
                   </>
                 ),
               },

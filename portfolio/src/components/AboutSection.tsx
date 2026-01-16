@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import styles from "./AboutSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { KKHenkka, HettaPallas, Saaris } from "../assets/media";
@@ -10,10 +10,7 @@ type AboutSectionProps = {
   onOpenContact?: () => void;
 };
 
-export default function AboutSection({ }: AboutSectionProps) {
-
-
-
+export default function AboutSection({}: AboutSectionProps) {
   const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(false);
   const toggleModal = () => setOpenModal(!openModal);
@@ -22,20 +19,37 @@ export default function AboutSection({ }: AboutSectionProps) {
     <div className={styles.sectionWrapper}>
       <div className={styles.content}>
         <div className={styles.containerCol}>
-          <div className={styles.textContent}>
+          <div className={styles.textContent} >
             <h1 className={text.title}>Hieman minusta</h1>
             <p className={text.body2}>
-              Hei! Olen Henri, intohimoinen ohjelmistokehittäjä, jolla on vahva
-              halu luoda innovatiivisia ratkaisuja. Taustani on
-              tietojenkäsittelytieteessä ja minulla on usean vuoden kokemus
-              alalta. Erikoistun web-sovellusten kehittämiseen siten, että ne
-              ovat sekä toiminnallisia että käyttäjäystävällisiä.
+              Hei! Olen Henri, 25-vuotias ohjelmistokehittäjä ja yrittäjä
+              Helsingistä. Opiskelen parhaillaan tietojenkäsittelyn Tradenomiksi
+              Haaga-Helian ammattikorkeakoulussa, ja yhdistän opintojen ohella
+              käytännön kehitystyötä asiakasprojekteihin ja omiin sovelluksiin.
             </p>
             <p className={text.body2}>
-              Kun en koodaa, minut löytää usein ulkoilemasta, lukemasta
-              teknologia-aiheisia blogeja tai kokeilemassa uusia
-              ohjelmointikieliä ja -kehyksiä. Olen aina halukas oppimaan uutta
-              ja tarttumaan uusiin haasteisiin.
+              Minua kiinnostaa erityisesti ohjelmistojen suunnittelu
+              kokonaisuuksina: miten tekniset ratkaisut tukevat todellisia
+              käyttötarpeita ja miten järjestelmästä saadaan samalla selkeä,
+              kestävä ja helposti ylläpidettävä. Työskentelen sujuvasti sekä
+              frontend- että backend-kehityksen parissa, ja minulla on kokemusta
+              mm. React-, Node.js- ja WordPress-pohjaisista ratkaisuista.
+            </p>
+            <p className={text.body2}>
+              Kun olen <em>offline</em>, minut löytää liikkumasta ja läheisten
+              seurasta. Olen insinöörimielinen tekijä, ja minut tunnetaan
+              parhaiten siitä, että työstän lähes aina jotakin projektia – usein
+              sellaista, joka syntyy konkreettisesta ongelmasta tai
+              kehitystarpeesta. Uskon vahvasti siihen, että jokainen ongelma on
+              ratkaistavissa, kunhan se pilkotaan tarpeeksi pieniin ja
+              ymmärrettäviin osiin.
+            </p>
+            <p className={text.body2}>
+              Etsin jatkuvasti tapoja kehittyä ohjelmistokehittäjänä ja
+              laajentaa osaamistani erityisesti tuotantokelpoisten sovellusten,
+              arkkitehtuurin ja DevOps-käytäntöjen parissa. Minulle tärkeää on
+              myös ymmärtää liiketoiminnan näkökulma teknisten ratkaisujen
+              taustalla.
             </p>
           </div>
 

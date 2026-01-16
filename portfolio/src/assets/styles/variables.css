@@ -68,6 +68,7 @@
 
     /* Containers */
 
+    --container-xs: 15rem;
     --container-sm: 20rem;
     --container-md: 27rem;
     --container-lg: 36rem;
