@@ -7,9 +7,9 @@ import ProjectsSection from "../components/ProjectsSection";
 import AboutSection from "../components/AboutSection";
 
 const SECTIONS: Section[] = [
-  { id: "home", label: "Home" },
-  { id: "projects", label: "Projects" },
-  { id: "about", label: "About" },
+  { id: "home", label: "Info" },
+  { id: "projects", label: "Työt" },
+  { id: "about", label: "Minusta" },
 ];
 
 export default function LandingPage() {

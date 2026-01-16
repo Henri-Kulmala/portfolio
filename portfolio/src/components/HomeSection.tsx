@@ -6,10 +6,11 @@ import { profilePic } from "../assets/media";
 import { IconCarousel } from "./IconCarousel";
 import Modal from "./Modal";
 import ContactForm from "./ContactForm";
+import { useNavigate } from "react-router-dom";
 
 export default function HomeSection() {
   const [isContactOpen, setIsContactOpen] = useState(false);
-
+  const navigate = useNavigate();
   const openContactModal = () => setIsContactOpen(true);
   const closeContactModal = () => setIsContactOpen(false);
 
@@ -20,6 +21,11 @@ export default function HomeSection() {
           <div className={styles.containerRow}>
             <button className={styles.contactButton} onClick={openContactModal}>
               Ota yhteyttä
+            </button>
+            <button
+              className={styles.contactButton}
+              onClick={() => navigate("/cv")}>
+              CV
             </button>
             <button
               className={styles.iconButton}
@@ -58,7 +64,6 @@ export default function HomeSection() {
         <div className={styles.iconContainer}>
           <IconCarousel />
         </div>
-
       </div>
     </div>
   );

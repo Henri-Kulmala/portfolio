@@ -32,7 +32,7 @@
     margin-bottom: var(--margin-5);
 }
 
-.column {}
+
 
 .textContent {
     max-width: 600px;
@@ -155,14 +155,38 @@
 
 @media only screen and (max-width: 480px) {
 
-
+    .wrapper {
+        gap: var(--gap-sm);
+        padding-top: 0;
+        margin-top: var(--margin-1);
+    }
     .videoWrapper {
         max-width: 100%;
+        margin-bottom: var(--margin-1);
 
     }
 
     .imageWrapper {
+        margin-bottom: var(--margin-1);
+    }
+    .row {
+        margin-top: var(--margin-1);
+        margin-bottom: var(--margin-1);
+    }
+
+    .imageWrapper {
         max-width: 100%;
+    }
+
+    .container {
+        gap: var(--gap-sm);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .textContent {
+        margin-bottom: 0;
+        gap: 1rem;
     }
 
 }

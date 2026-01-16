@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--padding-2);
+    padding: 0;
     gap: var(--gap-xl);
 }
 
@@ -21,9 +21,11 @@
     margin-top: var(--margin-2);
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 
-.projectCards {
+.projectCards,
+.projectCardsSm {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1.25rem;
@@ -31,9 +33,18 @@
     max-width: 100%;
     min-width: 0;
     box-sizing: border-box;
+
 }
 
+.projectCardsSm button:nth-child(1) {
 
+    grid-column: 2 / span 5;
+}
+
+.projectCardsSm button:nth-child(2) {
+
+    grid-column: auto / span 5;
+}
 
 
 .textContent {
@@ -77,6 +88,17 @@
 
 }
 
+@media only screen and (max-width: 1920px) {}
+
+@media only screen and (max-width: 900px) {
+
+    .sectionWrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+
+}
 
 
 /*  Mobile */
@@ -84,13 +106,11 @@
 @media only screen and (max-width: 480px) {
 
     .sectionWrapper {
-        padding: var(--padding-1);
         gap: var(--gap-sm);
     }
 
     .projectsWrapper {
         flex-direction: column;
-        padding: var(--padding-2);
         gap: var(--gap-sm);
         margin-top: var(--margin-2);
         margin-bottom: var(--margin-2);
@@ -153,6 +173,21 @@
 
 
     }
+
+    .projectCardsSm button:nth-child(1) {
+
+        grid-column: 2 / span 10;
+        height: 100%;
+        max-height: 300px;
+    }
+
+    .projectCardsSm button:nth-child(2) {
+
+        grid-column: 2 / span 10;
+        height: 100%;
+        max-height: 300px;
+    }
+
 
 
 

@@ -57,7 +57,7 @@ export default function ProjectsSection() {
           </p>
         </div>
         <div className={styles.projectsWrapper}>
-          <div className={styles.projectCards}>
+          <div className={styles.projectCardsSm}>
             <ProjectCardSm
               title="Treenikamu-sovellus"
               description="Liikunta- ja hyvinvointisovellus"
