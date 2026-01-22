@@ -1,21 +1,14 @@
 import styles from "./CvPage.module.css";
 import text from "../assets/styles/text.module.css";
-import { IoIosArrowRoundBack } from "react-icons/io";
+
 import { CvRoadmap, CvRoadmapSm } from "../components/CvRoadmap";
-import { useNavigate } from "react-router-dom";
 
 export default function BolenHella() {
 
-    const navigate = useNavigate();
+
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.header}>
-        <button className={styles.back} onClick={() => navigate("*")}>
-          <IoIosArrowRoundBack className={styles.icon} />
-          <span className={text.textDark}> Takaisin </span>
-        </button>
-      </div>
       <div className={styles.container}>
         <div className={styles.textContent}>
           <h1 className={text.title2}>Ansioluettelo - Henri Kulmala</h1>

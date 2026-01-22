@@ -2,7 +2,7 @@
 import styles from "./ProjectsSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { ProjectCard, ProjectCardSm } from "./ProjectCard";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 
 
@@ -47,7 +47,8 @@ export default function ProjectsSection() {
           </div>
         </div>
       </div>
-      <div className={styles.containerRow}>
+      <div className={styles.containerRow} id="projektit">
+        
         <div className={styles.textContent}>
           <h1 className={text.title}>Omat projektit</h1>
           <p className={text.body2}>

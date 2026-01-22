@@ -9,7 +9,7 @@ type Props = {
 
 export default function AnimatedBlobBackground({
   className,
-  baseColor = "#FFFCF2",
+  baseColor = "#f3ecd5",
   strength = 0.9,
 }: Props) {
   return (

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiUser, FiMail, FiPhone, FiMessageCircle } from "react-icons/fi";
 import styles from "./ContactPage.module.css";
 import text from "../assets/styles/text.module.css";
-import { IoIosArrowRoundBack } from "react-icons/io";
+
 
 export default function ContactPage() {
   const [result, setResult] = useState("");
@@ -27,16 +27,15 @@ export default function ContactPage() {
 
   return (
     <div className={styles.wrapper}>
-      <form className={styles.contactForm} onSubmit={onSubmit}>
-        <div className={styles.header}>
-          <button className={styles.back} onClick={() => window.history.back()}>
-            <IoIosArrowRoundBack className={styles.icon} />
-            <span className={text.textDark}> Takaisin </span>
-          </button>
-        </div>
-
+      <div className={styles.textContent}>
         <h1 className={text.title}>Ota yhteyttä</h1>
-
+        <p className={text.body2}>
+          Ota yhteyttä, jos haluat keskustella mahdollisesta yhteistyöstä,
+          projekteista tai muista aiheista. Vastaan viesteihin mahdollisimman
+          pian.
+        </p>
+      </div>
+      <form className={styles.contactForm} onSubmit={onSubmit}>
         <div className={styles.field}>
           <label htmlFor="first_name" className={styles.label}>
             Etunimi

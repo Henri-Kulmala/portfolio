@@ -1,0 +1,115 @@
+.stackRoot {
+    width: 100%;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+.chipsRow {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding: 0.25rem 0.25rem 0.75rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+.chip {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.6);
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-mobile);
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.55rem 0.9rem;
+    cursor: pointer;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.chipActive {
+    border-color: rgba(0, 0, 0, 0.18);
+    background: var(--secondary);
+    box-shadow: var(--box-shadow);
+    color: var(--color-white);
+}
+
+.mobileCard {
+    padding: 1.25rem;
+    background-color: var(--secondary);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow);
+}
+
+.mobileHeader {
+    padding-bottom: 0.75rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.listWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: var(--margin-3);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--secondary);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow);
+    max-height: fit-content;
+    transition: transform 300ms ease, box-shadow 300ms ease, filter 300ms ease;
+    flex: 1 1 240px;
+    min-width: 240px;
+}
+
+.list:hover {
+    filter: brightness(1.05);
+    box-shadow: var(--box-shadow-2);
+    transform: translateY(-2px);
+}
+
+.listContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.listHeader {
+    padding-bottom: 0.5rem;
+}

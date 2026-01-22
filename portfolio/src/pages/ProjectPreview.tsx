@@ -5,8 +5,9 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { EcomLanding, EcomVideo, EcomPlugin, EcomCatering, ScreenCap, LoginScreen, PMListing, ShopPage } from "../assets/media";
 import { useParams, Navigate } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
-import LeftNav, { type Section } from "../components/LeftNav";
 import { useActiveSection } from "../hooks/useActiveSection";
+import { useNavigate } from "react-router-dom";
+import SiteNav , { type Section } from "../components/SiteNav";
 
 const SECTIONSBH: Section[] = [
   { id: "kuvausbh", label: "Kuvaus" },
@@ -40,17 +41,19 @@ export function BolenHella() {
      window.history.replaceState(null, "", `#${id}`);
    };
 
+   const navigation = useNavigate();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.navbar}>
-        <LeftNav
+        <SiteNav
           sections={SECTIONSBH}
           activeSection={activeSection}
           onNavigate={handleNavigate}
         />
       </div>
       <div className={styles.header} id="kuvausbh">
-        <button className={styles.back} onClick={() => window.history.back()}>
+        <button className={styles.back} onClick={() => navigation(-1)}>
           <IoIosArrowRoundBack className={styles.icon} />
           <span className={text.textDark}> Projektit </span>
         </button>
@@ -65,12 +68,18 @@ export function BolenHella() {
           <div className={styles.row}>
             <div className={styles.column}>
               <p className={text.textDark}>Ajankohta</p>
-              <p className={text.body}>2025-</p>
+              <p className={text.body}>8/2025-</p>
             </div>
             <div className={styles.column}>
               <p className={text.textDark}>Työkalut</p>
               <p className={text.body}>
                 Wordpress, Woocommerce, Javascript, PHP, Adobe Illustrator
+              </p>
+            </div>
+            <div className={styles.column}>
+              <p className={text.textDark}>Työtehtävät</p>
+              <p className={text.body}>
+                Käyttöliittymän suunnittelu, Toteutus ja testaus
               </p>
             </div>
           </div>
@@ -94,19 +103,19 @@ export function BolenHella() {
         <div className={styles.textContent}>
           <h1 className={text.title2}>Tarve &amp; Tavoite</h1>
           <p className={text.body2}>
-            Bölen Hella eli K-Supermarket Triplan keittiö & palvelutiski, joka palvelee asiakkaitaan
-            laadukkailla tuotteilla ja henkilökohtaisella asiakaspalvelulla. 
-            Projektin lähtökohtana oli tarve tuoda Bölen Catering-palvelut selkeämmin
-            saataville myös verkossa ja helpottaa tilaamista erityisesti
-            ennakkotilausten osalta.
+            Bölen Hella eli K-Supermarket Triplan keittiö & palvelutiski, joka
+            palvelee asiakkaitaan laadukkailla tuotteilla ja henkilökohtaisella
+            asiakaspalvelulla. Projektin lähtökohtana oli tarve tuoda Bölen
+            Catering-palvelut selkeämmin saataville myös verkossa ja helpottaa
+            tilaamista erityisesti ennakkotilausten osalta.
           </p>
           <p className={text.body2}>
             Tavoitteena oli toteuttaa käyttäjäystävällinen ja visuaalisesti
-            houkutteleva verkkokauppa, joka heijastaa Bölen Hellan/Cateringin brändiä ja
-            arvoja, mutta toimii samalla käytännöllisenä työkaluna sekä
-            asiakkaille että henkilökunnalle. Verkkokaupan tuli olla helposti
-            ylläpidettävä, skaalautuva ja yhteensopiva asiakkaan olemassa
-            olevien järjestelmien kanssa.
+            houkutteleva verkkokauppa, joka heijastaa Bölen Hellan/Cateringin
+            brändiä ja arvoja, mutta toimii samalla käytännöllisenä työkaluna
+            sekä asiakkaille että henkilökunnalle. Verkkokaupan tuli olla
+            helposti ylläpidettävä, skaalautuva ja yhteensopiva asiakkaan
+            olemassa olevien järjestelmien kanssa.
           </p>
         </div>
       </div>
@@ -149,11 +158,7 @@ export function BolenHella() {
           />
         </div>
         <div className={styles.imageWrapper}>
-          <img
-            src={ShopPage}
-            alt="Kauppa-sivu"
-            className={styles.image}
-          />
+          <img src={ShopPage} alt="Kauppa-sivu" className={styles.image} />
         </div>
       </div>
 
@@ -207,7 +212,7 @@ export function Tuotehallinta() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.navbar}>
-        <LeftNav
+        <SiteNav
           sections={SECTIONSPM}
           activeSection={activeSection}
           onNavigate={handleNavigate}
@@ -239,12 +244,18 @@ export function Tuotehallinta() {
           <div className={styles.row}>
             <div className={styles.column}>
               <p className={text.textDark}>Ajankohta</p>
-              <p className={text.body}>2025-</p>
+              <p className={text.body}>8/2025-</p>
             </div>
             <div className={styles.column}>
               <p className={text.textDark}>Työkalut</p>
               <p className={text.body}>
                 React, Next.js, cPanel/Passanger, MySQL/Kysely
+              </p>
+            </div>
+            <div className={styles.column}>
+              <p className={text.textDark}>Työtehtävät</p>
+              <p className={text.body}>
+                Full-stack-sovelluksen suunnittelu, kehitys ja julkaisu
               </p>
             </div>
           </div>
@@ -256,7 +267,7 @@ export function Tuotehallinta() {
                   window.open(
                     "https://github.com/Henri-Kulmala/ProductManager",
                     "_blank",
-                    "noopener,noreferrer"
+                    "noopener,noreferrer",
                   )
                 }>
                 <FaGithub size={32} />

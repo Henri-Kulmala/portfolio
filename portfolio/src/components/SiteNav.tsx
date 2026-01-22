@@ -1,31 +1,20 @@
-
-import styles from "./LeftNav.module.css";
-import { useScrolled } from "../hooks/useScrolled";
-
+import styles from "./SiteNav.module.css";
 
 export type Section = {
   id: string;
   label: string;
 };
 
-type LeftNavProps = {
+type SiteNavProps = {
   sections: Section[];
   activeSection: string;
   onNavigate: (id: string) => void;
 };
 
-export default function LeftNav({
-  sections,
-  activeSection,
-  onNavigate,
-}: LeftNavProps) {
-
-  const scrolled = useScrolled(150);
-
-
+export default function SiteNav({ sections, activeSection, onNavigate }: SiteNavProps) {
   return (
     <div className={styles.navWrapper}>
-      <div className={`${styles.navList} ${scrolled ? styles.navListScrolled : ""}`}>
+      <div className={styles.navList}>
         {sections.map((section) => {
           const isActive = section.id === activeSection;
 
@@ -39,7 +28,13 @@ export default function LeftNav({
                   ? `${styles.navItem} ${styles.navItemActive}`
                   : styles.navItem
               }>
-              <span className={isActive? styles.navLabelActive : styles.navLabel}>{section.label}</span>
+              <span
+                className={isActive ? styles.navDotActive : styles.navDot}
+              />
+              <span
+                className={isActive ? styles.navLabelActive : styles.navLabel}>
+                {section.label}
+              </span>
             </button>
           );
         })}

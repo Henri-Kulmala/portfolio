@@ -1,0 +1,115 @@
+.navWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    transform: none;
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.navItem:hover .navDot {
+    background-color: var(--primary);
+    transform: scale(1.5);
+}
+
+.navItem:hover .navLabel {
+    opacity: 100%;
+    color: var(--primary);
+}
+
+
+
+
+.navDot {
+    width: var(--width-disabled);
+    height: var(--height-disabled);
+    background-color: var(--color-muted);
+    border-radius: 50%;
+    transition: all 250ms ease-in-out;
+    user-select: none;
+}
+
+.navDotActive {
+    width: var(--width-enabled);
+    height: var(--height-enabled);
+    background-color: var(--primary);
+    border-radius: 50%;
+    transition: all 250ms ease-in-out;
+    user-select: none;
+}
+
+.navLabel {
+    opacity: 0%;
+    font-family: var(--font-body);
+    font-size: var(--font-size-nav);
+    font-weight: var(--font-weight-body);
+    color: var(--primary);
+    user-select: none;
+    transition: all 250ms ease-in-out;
+}
+
+.navLabelActive {
+    opacity: 100%;
+    font-family: var(--font-body);
+    font-size: var(--font-size-nav);
+    font-weight: var(--font-weight-body);
+    color: var(--primary);
+    user-select: none;
+    transition: all 250ms ease-in-out;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 768px) {
+    /*
+    .navWrapper {
+        max-width: 100% auto;
+        border-radius: var(--border-radius-md);
+        background-color: #fffef967;
+        backdrop-filter: blur(20px) saturate(1.7);
+        z-index: 999;
+    }
+
+    .navList {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .navItem {
+        padding: 0;
+        min-width: 0;
+        flex: 0 0 auto;
+    }
+
+
+    .navLabelActive {
+        display: inline;
+        white-space: nowrap;
+    }
+        */
+
+    .navWrapper {
+        display: none;
+    }
+
+}

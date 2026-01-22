@@ -2,21 +2,17 @@
 import styles from "./AboutSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { KKHenkka, HettaPallas, Saaris } from "../assets/media";
-import { useNavigate } from "react-router-dom";
 
-type AboutSectionProps = {
-  onOpenContact?: () => void;
-};
 
-export default function AboutSection({}: AboutSectionProps) {
-  const navigate = useNavigate();
+export default function AboutSection() {
+
 
 
   return (
     <div className={styles.sectionWrapper}>
       <div className={styles.content}>
         <div className={styles.containerCol}>
-          <div className={styles.textContent} >
+          <div className={styles.textContent} id="hieman-minusta">
             <h1 className={text.title}>Hieman minusta</h1>
             <p className={text.body2}>
               Hei! Olen Henri, 25-vuotias ohjelmistokehittäjä ja yrittäjä
@@ -48,19 +44,6 @@ export default function AboutSection({}: AboutSectionProps) {
               myös ymmärtää liiketoiminnan näkökulma teknisten ratkaisujen
               taustalla.
             </p>
-          </div>
-
-          <div className={styles.buttonsWrapper}>
-            <button className={styles.contactButton} onClick={() => navigate("/contact")}>
-              Ota yhteyttä
-            </button>
-
-
-            <button
-              className={styles.contactButton}
-              onClick={() => navigate("/cv")}>
-              CV
-            </button>
           </div>
         </div>
       </div>

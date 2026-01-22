@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    gap: var(--gap-xl);
+    gap: 10rem;
 }
 
 .containerRow {
@@ -12,6 +12,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 5rem;
+
 }
 
 .projectsWrapper {

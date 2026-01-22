@@ -1,20 +1,19 @@
-
 import styles from "./HomeSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { FaGithub } from "react-icons/fa";
 import { profilePic } from "../assets/media";
-import { IconCarousel } from "./IconCarousel";
+import TechStack from "./TechStack";
+
 import { useNavigate } from "react-router-dom";
 
-export default function HomeSection() {
 
+export default function HomeSection() {
   const navigate = useNavigate();
 
-
   return (
-    <div>
-      <div className={styles.heroContainer}>
-        <div className={styles.textContent}>
+    <div className={styles.sectionWrapper}>
+      <div className={styles.container}>
+        <div className={styles.textContentWrapper}>
           <h1 className={text.title}>Henri Kulmala</h1>
           <div className={styles.textContent}>
             <p className={text.body2}>Helsinki, Finland</p>
@@ -22,10 +21,6 @@ export default function HomeSection() {
               BBA / Tradenomi (AMK), Information Technology
             </p>
             <p className={text.body2}>Available for internships / full-time</p>
-
-            <p className={text.body2}>
-              React · React Native · Node.js · REST APIs
-            </p>
           </div>
 
           <div className={styles.containerRow}>
@@ -34,11 +29,7 @@ export default function HomeSection() {
               onClick={() => navigate("/contact")}>
               Ota yhteyttä
             </button>
-            <button
-              className={styles.contactButton}
-              onClick={() => navigate("/cv")}>
-              CV
-            </button>
+
             <button
               className={styles.iconButton}
               onClick={() =>
@@ -52,19 +43,26 @@ export default function HomeSection() {
             </button>
           </div>
         </div>
-        <div className={styles.content}>
+        <div className={styles.imgWrapper}>
           <img className={styles.image} src={profilePic} alt="" />
         </div>
       </div>
 
-      {/* Possible icon carousel in the future
-      <div className={styles.heroFooter}>
-        <div className={styles.iconContainer}>
-          <IconCarousel />
+      <div className={styles.content} id="tenkiset-ydinosaamiset">
+        <div className={styles.contentHeader}>
+          <h1 className={text.title}>Tekniset ydinosaamiset</h1>
+          <h2 className={text.h2color}>+3 vuotta kokemusta</h2>
+          <p className={text.body2}>
+            Alla on listattuna keskeisimmät teknologiat ja työkalut, joita olen
+            käyttänyt projekteissani.
+          </p>
         </div>
+        
+
+        <TechStack />
       </div>
-    </div>
-    */}
+      
+      
     </div>
   );
 }

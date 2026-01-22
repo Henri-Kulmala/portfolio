@@ -1,7 +1,9 @@
 
 import styles from "./Footer.module.css";
 import text from "../assets/styles/text.module.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+
+
 
 export default function Footer() {
 
@@ -13,8 +15,23 @@ export default function Footer() {
           <h1 className={text.header3}>Pikalinkit</h1>
           <li>
             <a onClick={() => navigate("/")} className={text.link}>
-              Etusivu
+              Työt
             </a>
+          </li>
+          <li>
+            <a onClick={() => navigate("/#projektit")} className={text.link}>
+              Omat projektit
+            </a>
+          </li>
+          <li>
+            <Link to="/minusta#hieman-minusta" className={text.link}>
+              Hieman minusta
+            </Link>
+          </li>
+          <li>
+            <Link to="/minusta#tenkiset-ydinosaamiset" className={text.link}>
+              Tenkiset ydinosaamiset
+            </Link>
           </li>
           <li>
             <a onClick={() => navigate("/contact")} className={text.link}>
@@ -24,11 +41,6 @@ export default function Footer() {
           <li>
             <a onClick={() => navigate("/cv")} className={text.link}>
               Ansioluettelo
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Henri-Kulmala" className={text.link}>
-              GitHub
             </a>
           </li>
         </ul>
