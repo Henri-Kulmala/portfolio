@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ProjectPreview.module.css";
 import text from "../assets/styles/text.module.css";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { EcomLanding, EcomVideo, EcomPlugin, EcomCatering, ScreenCap, LoginScreen, PMListing } from "../assets/media";
+import { EcomLanding, EcomVideo, EcomPlugin, EcomCatering, ScreenCap, LoginScreen, PMListing, ShopPage } from "../assets/media";
 import { useParams, Navigate } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import LeftNav, { type Section } from "../components/LeftNav";
@@ -150,8 +150,8 @@ export function BolenHella() {
         </div>
         <div className={styles.imageWrapper}>
           <img
-            src={EcomCatering}
-            alt="Bölen Hella verkkokauppa"
+            src={ShopPage}
+            alt="Kauppa-sivu"
             className={styles.image}
           />
         </div>

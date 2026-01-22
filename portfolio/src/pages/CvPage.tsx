@@ -40,12 +40,13 @@ export default function BolenHella() {
                 ],
                 description: (
                   <>
-                    Toimin itsenäisenä ohjelmisto- ja web-kehittäjänä
-                    asiakasprojekteissa. Vastaan koko toteutuksesta
-                    suunnittelusta julkaisuun, mukaan lukien tekniset ratkaisut,
-                    ylläpidon ja asiakastuen. Työ painottuu käytännönläheisiin
-                    ratkaisuihin, selkeään dokumentaatioon ja asiakkaan arjen
-                    helpottamiseen{" "}
+                    Toimin itsenäisenä ohjelmistokehittäjänä ja IT-konsulttina
+                    asiakasprojekteissa. Vastaan kokonaisvaltaisesti projektien
+                    toteutuksesta suunnittelusta julkaisuun, sisältäen tekniset
+                    ja visuaaliset ratkaisut sekä tarvittaessa ylläpidon.
+                    Työskentely painottuu käytännönläheisiin ratkaisuihin,
+                    selkeään dokumentaatioon ja tiiviiseen yhteistyöhön
+                    asiakkaan kanssa.
                   </>
                 ),
               },
@@ -75,13 +76,14 @@ export default function BolenHella() {
                       Toimin teknisenä tukena kirjan{" "}
                       <em className={text.emphasis}>
                         {" "}
-                        Alaraajat - Tutkiminen, hoito ja kuntoutus{" "}
+                        Alaraajat - Tutkiminen, hoito ja kuntoutus (Jarmo Ahonen
+                        - Joni Järvi){" "}
                       </em>{" "}
                       kirjahankkeessa. Työnkuvaan kuului mm. laajan
                       mediakirjaston ylläpitäminen, kuvien ja videoiden
                       muokkaus, oikoluku, kuvitus sekä tietoteknisen tuki ja
-                      ohjeistus. Työskentelin kirjalilijoiden, kustantajan sekä
-                      kirjan taittajan kanssa projektin aikana.
+                      ohjeistus. Työskentelin aktiivisesti kirjalilijoiden,
+                      kustantajan sekä kirjan taittajan kanssa projektin aikana.
                     </>
                   ),
                 },
@@ -103,8 +105,8 @@ export default function BolenHella() {
                   ],
                   description: (
                     <>
-                      Suunnittelin ja toteutin Wordpress-pohjaisen verkkokaupan
-                      catering-palvelulle.  Toteutus sisältää verkkokauppasivujen
+                      Suunnittelen ja toteutan Wordpress-pohjaisen verkkokaupan
+                      catering-palvelulle. Toteutus sisältää verkkokauppasivujen
                       lisäksi räätälöidyn Wordpress-lisäosan sekä
                       React/Node.js-pohjaisen web-sovelluksen tuotteiden
                       esittelyä ja hallintaa varten.

@@ -1,9 +1,7 @@
-import { useState } from "react";
+
 import styles from "./AboutSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { KKHenkka, HettaPallas, Saaris } from "../assets/media";
-import ContactForm from "./ContactForm";
-import Modal from "./Modal";
 import { useNavigate } from "react-router-dom";
 
 type AboutSectionProps = {
@@ -12,8 +10,7 @@ type AboutSectionProps = {
 
 export default function AboutSection({}: AboutSectionProps) {
   const navigate = useNavigate();
-  const [openModal, setOpenModal] = useState(false);
-  const toggleModal = () => setOpenModal(!openModal);
+
 
   return (
     <div className={styles.sectionWrapper}>
@@ -54,12 +51,10 @@ export default function AboutSection({}: AboutSectionProps) {
           </div>
 
           <div className={styles.buttonsWrapper}>
-            <button className={styles.contactButton} onClick={toggleModal}>
+            <button className={styles.contactButton} onClick={() => navigate("/contact")}>
               Ota yhteyttä
             </button>
-            <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
-              <ContactForm />
-            </Modal>
+
 
             <button
               className={styles.contactButton}

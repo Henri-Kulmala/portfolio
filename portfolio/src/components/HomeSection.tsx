@@ -1,25 +1,37 @@
-import { useState } from "react";
+
 import styles from "./HomeSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { FaGithub } from "react-icons/fa";
 import { profilePic } from "../assets/media";
 import { IconCarousel } from "./IconCarousel";
-import Modal from "./Modal";
-import ContactForm from "./ContactForm";
 import { useNavigate } from "react-router-dom";
 
 export default function HomeSection() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
+
   const navigate = useNavigate();
-  const openContactModal = () => setIsContactOpen(true);
-  const closeContactModal = () => setIsContactOpen(false);
+
 
   return (
     <div>
       <div className={styles.heroContainer}>
         <div className={styles.textContent}>
+          <h1 className={text.title}>Henri Kulmala</h1>
+          <div className={styles.textContent}>
+            <p className={text.body2}>Helsinki, Finland</p>
+            <p className={text.body2}>
+              BBA / Tradenomi (AMK), Information Technology
+            </p>
+            <p className={text.body2}>Available for internships / full-time</p>
+
+            <p className={text.body2}>
+              React · React Native · Node.js · REST APIs
+            </p>
+          </div>
+
           <div className={styles.containerRow}>
-            <button className={styles.contactButton} onClick={openContactModal}>
+            <button
+              className={styles.contactButton}
+              onClick={() => navigate("/contact")}>
               Ota yhteyttä
             </button>
             <button
@@ -33,38 +45,26 @@ export default function HomeSection() {
                 window.open(
                   "https://github.com/Henri-Kulmala",
                   "_blank",
-                  "noopener,noreferrer"
+                  "noopener,noreferrer",
                 )
               }>
               <FaGithub size={32} />
             </button>
-            <Modal isOpen={isContactOpen} onClose={closeContactModal}>
-              {isContactOpen && <ContactForm />}
-            </Modal>
           </div>
-          <h1 className={text.title}>Henri Kulmala</h1>
-          <p className={text.textDark}>
-            Helsinki, Finland · Open to remote / hybrid
-          </p>
-          <p className={text.textDark}>
-            BBA / Tradenomi (AMK), Information Technology
-          </p>
-          <p className={text.textDark}>Available for internships / full-time</p>
-
-          <p className={text.textDark}>
-            React · React Native · TypeScript · Node.js · REST APIs
-          </p>
         </div>
         <div className={styles.content}>
           <img className={styles.image} src={profilePic} alt="" />
         </div>
       </div>
 
+      {/* Possible icon carousel in the future
       <div className={styles.heroFooter}>
         <div className={styles.iconContainer}>
           <IconCarousel />
         </div>
       </div>
+    </div>
+    */}
     </div>
   );
 }
