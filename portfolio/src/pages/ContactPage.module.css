@@ -1,11 +1,16 @@
-.contactForm {
-    max-width: var(--container-md);
-    margin: 0 auto;
-    padding: var(--padding-1);
-    background-color: var(--color-white);
-    border-radius: var(--border-radius-lg);
 
+.wrapper {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.contactForm {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    max-width: 600px;
     flex-direction: column;
     gap: 1rem;
 }
@@ -26,6 +31,36 @@
     gap: 0.4rem;
 }
 
+.header {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-2);
+}
+
+.back {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: var(--font-size-nav);
+    color: var(--color-light-muted);
+    transition: all 0.2s ease-in-out;
+}
+
+.header:hover .back,
+.header:hover span {
+    color: var(--primary);
+    transform: scale(0.96);
+
+
+}
+
+.header span {
+    transition: all 0.2s ease-in-out;
+}
 
 .inputWrapper {
     display: flex;
@@ -129,6 +164,16 @@
     overflow: hidden;
 }
 
+.textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--gap-sm);
+    max-width: 600px;
+    padding-bottom: 5rem;
+}
+
 @media only screen and (max-width: 1920px) {
     .contactForm {
         max-width: var(--container-sm);
@@ -138,7 +183,11 @@
 @media only screen and (max-width: 480px) {
     .contactForm {
         max-width: var(--container-xs);
-        
+
     }
-    
+
+    .textContent {
+        max-width: 60vw;
+    }
+
 }

@@ -19,6 +19,7 @@ export { default as EComImg } from './Bölen Hella.png';
 export { default as BölenLogo } from './projects/ECommerce/Bölen Hella.svg';
 export { default as EcomLanding } from './projects/ECommerce/Landing page.jpg';
 export { default as EcomPlugin } from './projects/ECommerce/Plugin.jpg';
+export { default as ShopPage } from './projects/ECommerce/ShopPage.jpg';
 export { default as EcomCatering } from './projects/ECommerce/Catering.jpg';
 export { default as EcomVideo } from './projects/ECommerce/Screen recording.mp4';
 export { default as PMAdmin } from './projects/ProductManager/Admin panel.jpg';

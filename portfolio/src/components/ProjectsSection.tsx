@@ -2,7 +2,7 @@
 import styles from "./ProjectsSection.module.css";
 import text from "../assets/styles/text.module.css";
 import { ProjectCard, ProjectCardSm } from "./ProjectCard";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 
 
@@ -21,11 +21,12 @@ export default function ProjectsSection() {
     <div className={styles.sectionWrapper}>
       <div className={styles.containerRow}>
         <div className={styles.textContent}>
-          <h1 className={text.title}>Kehitetään parhaillaan</h1>
+          <h1 className={text.title}>Asiakasprojektit</h1>
           <p className={text.body2}>
-            Tässä osiossa esiteltävät projektit ovat parhaillaan työn alla. Ne
-            kehittyvät aktiivisesti ja sisältö, toiminnallisuudet sekä
-            visuaalinen ilme voivat vielä muuttua.
+            Asiakasprojekteja, joita toteutan osana yritystoimintaani. Projektit
+            kattavat koko kehitysprosessin aina suunnittelusta tekniseen
+            toteutukseen ja julkaisuun. Työt on tehty oikeisiin
+            tuotantoympäristöihin ja todellisiin tarpeisiin.
           </p>
         </div>
         <div className={styles.projectsWrapper}>
@@ -45,9 +46,9 @@ export default function ProjectsSection() {
             />
           </div>
         </div>
-        
       </div>
-      <div className={styles.containerRow}>
+      <div className={styles.containerRow} id="projektit">
+        
         <div className={styles.textContent}>
           <h1 className={text.title}>Omat projektit</h1>
           <p className={text.body2}>
@@ -66,7 +67,7 @@ export default function ProjectsSection() {
                 window.open(
                   "https://github.com/Henri-Kulmala/Treenikamu-app",
                   "_blank",
-                  "noopener,noreferrer"
+                  "noopener,noreferrer",
                 )
               }
             />
@@ -79,7 +80,7 @@ export default function ProjectsSection() {
                 window.open(
                   "https://github.com/Ruokakomero/Ruokakomero-App",
                   "_blank",
-                  "noopener,noreferrer"
+                  "noopener,noreferrer",
                 )
               }
             />

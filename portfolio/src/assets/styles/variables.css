@@ -1,9 +1,11 @@
 :root {
     --text: #252422;
     --bg: #FFFCF2;
+    --navItemActive: #f3faf9c5;
+        --navLabelActive: #3e4d4c;
 
     --primary: #EB5E28;
-    --secondary: #232D55;
+    --secondary: #232d55d3;
 
     --color-grey: #79736b;
     --color-muted: #403D39;

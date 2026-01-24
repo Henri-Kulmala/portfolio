@@ -3,8 +3,10 @@
     font-size: var(--font-size-title);
     font-weight: 900;
     color: var(--text);
-    
+
 }
+
+
 
 .titleLight {
 
@@ -24,7 +26,7 @@
 }
 
 .titleInteractive:hover {
-    color: var(--primary) ;
+    color: var(--primary);
     transform: scale(1.02);
 
 }
@@ -34,7 +36,14 @@
     font-size: var(--font-size-title2);
     font-weight: 900;
     color: var(--text);
-    
+
+}
+
+.h2color {
+    font-family: var(--font-title);
+    font-size: var(--font-size-title2);
+    font-weight: 900;
+    color: var(--primary);
 }
 
 .header {
@@ -43,15 +52,32 @@
     font-size: var(--font-size-header);
     font-weight: 900;
     color: var(--text);
-    
+
 }
 
-.header2 {
+.headerLight {
 
+    font-family: var(--font-title);
+    font-size: var(--font-size-header);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--color-white);
+
+}
+
+
+.header2 {
     font-family: var(--font-body);
     font-size: var(--font-size-body);
     font-weight: 500;
     color: var(--color-muted);
+}
+
+.header3 {
+    font-family: var(--font-title);
+    font-size: var(--font-size-nav);
+    font-weight: 600;
+    color: var(--text);
 }
 
 .body {
@@ -61,7 +87,7 @@
     font-weight: var(--font-weight-body);
     color: var(--text);
     margin-top: var(--gap-sm);
-    
+
 }
 
 
@@ -71,7 +97,7 @@
     font-weight: var(--font-weight-body2);
     color: var(--text);
     margin-top: var(--gap-sm);
-   
+
 }
 
 .body3 {
@@ -82,6 +108,16 @@
     line-height: 1.5;
 }
 
+.body3Light {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    color: var(--color-white);
+    line-height: 1.5;
+}
+
+
+
 .emphasis {
     font-family: var(--font-body);
     font-size: var(--font-size-body);
@@ -89,7 +125,7 @@
     color: var(--text);
     margin-top: var(--gap-sm);
     font-style: italic;
-    
+
 }
 
 .text {
@@ -100,7 +136,7 @@
     color: var(--bg);
     padding: 0;
     margin: 0;
-   
+
 }
 
 .textDark {
@@ -115,31 +151,70 @@
 }
 
 
- .cardTitle {
-     font-size: var(--font-size-header);
-     font-weight: var(--font-weight-title);
-     font-family: var(--font-title);
-     color: var(--bg);
-     padding: 0;
-     margin: 0;
- }
+.cardTitle {
+    font-size: var(--font-size-header);
+    font-weight: var(--font-weight-title);
+    font-family: var(--font-title);
+    color: var(--bg);
+    padding: 0;
+    margin: 0;
+}
 
- .cardText {
-     font-size: var(--font-size-body);
-     font-weight: var(--font-weight-text);
-     font-family: var(--font-body);
-     letter-spacing: 0.5px;
-     color: var(--bg);
-     padding: 0;
-     margin: 0;
- }
+.cardText {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-text);
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    color: var(--bg);
+    padding: 0;
+    margin: 0;
+}
+
+.email {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    color: var(--primary);
+    padding: 0;
+    margin: 0;
+}
+
+.link {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    color: var(--text);
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+
+}
+
+.link:hover {
+    box-shadow: var(--box-shadow-2);
+    color: var(--primary);
+}
+
+.listItem {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    font-family: var(--font-body);
+    letter-spacing: 0.5px;
+    color: var(--text);
+    padding: 0;
+    margin: 0;
+}
 
 
 
 /*  Mobile */
 
 @media only screen and (max-width: 480px) {
-    
+
     .title {
         font-size: var(--font-size-title-mobile);
     }
