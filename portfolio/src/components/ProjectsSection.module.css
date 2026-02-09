@@ -38,15 +38,21 @@
 
 }
 
-.projectCardsSm button:nth-child(1) {
 
-    grid-column: 2 / span 5;
+
+.projectCardsSm {
+    gap: 2rem;
 }
 
-.projectCardsSm button:nth-child(2) {
-
-    grid-column: auto / span 5;
+.projectCardsSm div {
+    grid-column: span 4;
 }
+
+.projectCardsSm>.cardSquare:nth-child(1) button {
+    background-color: var(--primary);
+}
+
+
 
 
 .textContent {
@@ -57,6 +63,16 @@
     justify-content: center;
 
 
+}
+
+.textContentHeader {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
 }
 
 .projectInfo {
@@ -99,6 +115,14 @@
         padding: 0;
     }
 
+    .projectCardsSm {
+        gap: 1rem;
+    }
+
+    .projectCardsSm div {
+        grid-column: 2 / span 10;
+    }
+
 
 }
 
@@ -107,6 +131,11 @@
 
 @media only screen and (max-width: 480px) {
 
+
+    .projectCards,
+    .projectCardsSm {
+        row-gap: 3rem;
+    }
     .sectionWrapper {
         gap: var(--gap-sm);
     }
@@ -126,16 +155,19 @@
         justify-content: center;
     }
 
-    .projectsWrapper {
-        display: flex;
-        gap: var(--gap-xl);
-        margin-top: var(--margin-3);
-        margin-bottom: var(--margin-3);
-    }
-
 
 
     .textContent {
+        display: flex;
+        flex-direction: column;
+        max-width: 80vw;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .textContentHeader {
         display: flex;
         flex-direction: column;
         max-width: 80vw;
@@ -174,20 +206,6 @@
         text-align: left;
 
 
-    }
-
-    .projectCardsSm button:nth-child(1) {
-
-        grid-column: 2 / span 10;
-        height: 100%;
-        max-height: 300px;
-    }
-
-    .projectCardsSm button:nth-child(2) {
-
-        grid-column: 2 / span 10;
-        height: 100%;
-        max-height: 300px;
     }
 
 

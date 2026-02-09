@@ -24,6 +24,7 @@
     gap: var(--gap-lg);
     width: 100%;
     min-width: 0;
+    padding-bottom: 3rem;
 }
 
 .containerCol {

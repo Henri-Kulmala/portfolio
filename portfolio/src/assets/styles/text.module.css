@@ -39,6 +39,14 @@
 
 }
 
+.title3 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-muted);
+
+}
+
 .h2color {
     font-family: var(--font-title);
     font-size: var(--font-size-title2);
@@ -238,5 +246,12 @@
     .text {
         font-size: var(--font-size-body-mobile);
     }
+        .title3 {
+            font-family: var(--font-title);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-muted);
+    
+        }
 
 }

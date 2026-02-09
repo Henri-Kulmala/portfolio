@@ -31,6 +31,7 @@ export { default as LoginScreen } from './projects/ProductManager/login.jpg';
 export { default as RuokakomeroMockup } from './projects/Ruokakomero-app/Ruokakomero-mockup.svg';
 export { default as RuokakomeroRecipe } from './projects/Ruokakomero-app/Ruokakomero-reseptivalitsin.png';
 export { default as RuokakomeroGeneratedRecipe } from './projects/Ruokakomero-app/Ruokakomero-ruokaehdotus.png';
+export { default as Shifter } from './projects/Shifter-työvuorosuunnittelu/Shifter.svg';
 
 export {default as KKHenkka} from './about/KKHenkka.jpeg';
 export {default as HettaPallas} from './about/HettaPallas.jpg';

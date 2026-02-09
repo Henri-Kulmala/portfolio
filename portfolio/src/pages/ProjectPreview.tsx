@@ -249,7 +249,7 @@ export function Tuotehallinta() {
             <div className={styles.column}>
               <p className={text.textDark}>Työkalut</p>
               <p className={text.body}>
-                React, Next.js, cPanel/Passanger, MySQL/Kysely
+                React, Next.js, cPanel/Passanger, MariaDB, Kysely
               </p>
             </div>
             <div className={styles.column}>
