@@ -55,7 +55,9 @@ export default function ProjectsSection() {
               title="Tuotehallinta"
               description="Tuotehallintasovellus"
               imgSrc={ProductManagerImg}
+              variant="secondary"
               onClick={() => navigate("/projects/tuotehallinta")}
+              tags={["React", "Node.js", "MariaDB", "Zode",  "Kysely", "cPanel"]}
             />
 
             <ProjectCard
@@ -63,6 +65,7 @@ export default function ProjectsSection() {
               description="Verkkokauppa"
               imgSrc={EComImg}
               onClick={() => navigate("/projects/bolen-hella")}
+              tags={["Wordpress", "PHP", "JavaScript", "WooCommerce", "Figma"]}
             />
           </div>
         </div>
@@ -78,7 +81,7 @@ export default function ProjectsSection() {
         </div>
         <div className={styles.projectsWrapper}>
           <div className={styles.projectCardsSm}>
-            <ProjectCard
+            <ProjectCardSm
               title="Treenikamu-sovellus"
               description="Liikunta- ja hyvinvointisovellus"
               imgSrc={Treenikamu}
@@ -89,8 +92,10 @@ export default function ProjectsSection() {
                   "noopener,noreferrer",
                 )
               }
+              tags={["React Native", "Expo", "Firebase", "Render"]}
+              variant="primary"
             />
-            
+
             <ProjectCardSm
               title="Shifter-vuoronsuunnittelu"
               description="Vuoronhallintajärjestelmä myymälöille"
@@ -102,15 +107,14 @@ export default function ProjectsSection() {
                   "noopener,noreferrer",
                 )
               }
+              tags={["React", "Java Spring Boot", "MySQL", "Render"]}
+              variant="secondary"
             />
-          </div>
-        </div>
-        <div className={styles.projectsWrapper}>
-          <div className={styles.projectCardsSm}>
             <ProjectCardSm
               title="Ruokakomero-sovellus"
               description="AI-avusteinen reseptisovellus"
               imgSrc={RuokakomeroMockup}
+              variant="secondary"
               onClick={() =>
                 window.open(
                   "https://github.com/Ruokakomero/Ruokakomero-App",
@@ -118,9 +122,18 @@ export default function ProjectsSection() {
                   "noopener,noreferrer",
                 )
               }
+              tags={[
+                "React Native",
+                "Expo",
+                "Node.js",
+                "Firebase",
+                "OpenAI API",
+                "CSC-Rahti",
+              ]}
             />
           </div>
         </div>
+       
       </div>
     </div>
   );

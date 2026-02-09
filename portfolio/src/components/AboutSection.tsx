@@ -26,7 +26,7 @@ export default function AboutSection() {
               käyttötarpeita ja miten järjestelmästä saadaan samalla selkeä,
               kestävä ja helposti ylläpidettävä. Työskentelen sujuvasti sekä
               frontend- että backend-kehityksen parissa, ja minulla on kokemusta
-              mm. React-, Node.js- ja WordPress-pohjaisista ratkaisuista.
+              mm. React-, React Native-, Node.js- ja Java-pohjaisista ratkaisuista.
             </p>
             <p className={text.body2}>
               Kun olen <em>offline</em>, minut löytää liikkumasta ja läheisten

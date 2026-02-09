@@ -4,6 +4,23 @@
     --pad: var(--padding-3);
     --card-h: 500px;
 
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+.cardWide {
+    grid-column: 6 / span 8;
+}
+
+.cardSquare {
+    grid-column: 1 / span 5;
+}
+
+.cardButton {
     height: var(--card-h);
     position: relative;
     display: block;
@@ -24,21 +41,18 @@
     transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
 }
 
-.cardWide {
+.cardWide .cardButton {
     background-color: var(--primary);
-    grid-column: 6 / span 8;
-
 }
 
-.cardSquare {
+.cardSquare .cardButton {
     background-color: var(--secondary);
-    grid-column: 1 / span 5;
 }
 
 .cardSquare .image {
     max-width: 40vw;
     margin-left: 1rem;
-    
+
 }
 
 .inner {
@@ -108,26 +122,73 @@
     pointer-events: none;
 }
 
-.cardWide:hover,
-.cardSquare:hover {
+.cardButton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.08) 0%,
+            rgba(0, 0, 0, 0.18) 55%,
+            rgba(0, 0, 0, 0.32) 100%);
+    opacity: 0.0;
+    transition: opacity 220ms ease;
+    pointer-events: none;
+}
+
+.cardButton:hover {
     transform: translateY(-6px);
     box-shadow: var(--box-shadow-inset-hover);
 }
 
-.cardWide:hover::after,
-.cardSquare:hover::after {
+.cardButton:hover::after {
     opacity: 1;
 }
 
-.cardWide:hover .image,
-.cardSquare:hover .image {
+.cardButton:hover .image {
     transform: translateY(10%) scale(1.1);
 }
 
-.cardWide:focus-visible,
-.cardSquare:focus-visible {
+.cardButton:focus-visible {
     outline: 2px solid rgba(255, 255, 255, 0.6);
     outline-offset: 3px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    user-select: none;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    border: 1px solid var(--color-light-muted);
+    font-family: var(--font-title);
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--text);
+    line-height: 1;
+    backdrop-filter: blur(30px) saturate(1.7);
+    box-shadow: var(--box-shadow-inset-2);
+}
+
+.cardButton.primary {
+    background-color: var(--primary);
+}
+
+.cardButton.secondary {
+    background-color: var(--secondary);
+}
+
+.cardButton.tertiary {
+    background-color: var(--color-light);
 }
 
 @media only screen and (max-width: 1920px) {
@@ -148,7 +209,7 @@
         max-width: 100%;
         max-height: 100%;
 
-        
+
     }
 
 }
@@ -159,12 +220,14 @@
 @media only screen and (max-width: 900px) {
     .cardWide {
         grid-column: 3 / span 8;
-        height: 100%;
-        max-height: 400px;
     }
 
     .cardSquare {
         grid-column: 3 / span 8;
+    }
+
+    .cardWide .cardButton,
+    .cardSquare .cardButton {
         height: 100%;
         max-height: 400px;
     }
@@ -175,10 +238,6 @@
         border-radius: var(--border-radius-lg)
     }
 
-    .cardSquare .image {
-        width: 100%;
-        margin-left: 0;
-    }
 
 }
 
@@ -187,10 +246,13 @@
     .cardWide,
     .cardSquare {
         grid-column: 2 / span 10;
+    }
+
+    .cardWide .cardButton,
+    .cardSquare .cardButton {
         height: 100%;
         max-height: 300px;
     }
-
 
 
     .media {
