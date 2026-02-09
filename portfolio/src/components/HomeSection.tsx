@@ -15,12 +15,9 @@ export default function HomeSection() {
       <div className={styles.container}>
         <div className={styles.textContentWrapper}>
           <h1 className={text.title}>Henri Kulmala</h1>
-          <div className={styles.textContent}>
+          <div className={styles.textContentHeader}>
+            <p className={text.body2}>Full-Stack kehittäjä / Yrittäjä</p>
             <p className={text.body2}>Helsinki, Finland</p>
-            <p className={text.body2}>
-              BBA / Tradenomi (AMK), Information Technology
-            </p>
-            <p className={text.body2}>Available for internships / full-time</p>
           </div>
 
           <div className={styles.containerRow}>
@@ -57,12 +54,9 @@ export default function HomeSection() {
             käyttänyt projekteissani.
           </p>
         </div>
-        
 
         <TechStack />
       </div>
-      
-      
     </div>
   );
 }

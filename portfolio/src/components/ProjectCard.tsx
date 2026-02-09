@@ -16,6 +16,7 @@ function CardBase({
   size,
 }: BaseProps & { size: "wide" | "square" }) {
   return (
+    
     <button
       type="button"
       className={size === "wide" ? styles.cardWide : styles.cardSquare}

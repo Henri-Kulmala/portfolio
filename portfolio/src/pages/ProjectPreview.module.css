@@ -156,16 +156,19 @@
     .wrapper {
         gap: var(--gap-sm);
         padding-top: 0;
+        padding-inline: 1rem;
         margin-top: var(--margin-1);
     }
     .videoWrapper {
         max-width: 100%;
         margin-bottom: var(--margin-1);
+        border-radius: 0.5rem;
 
     }
 
     .imageWrapper {
         margin-bottom: var(--margin-1);
+        border-radius: 0.5rem;
     }
     .row {
         margin-top: var(--margin-1);
